@@ -1,0 +1,906 @@
+hadd Target file: ../sample/BsMC_a_20_30.root
+hadd compression setting for all ouput: 1
+hadd Source file 1: ../sample/BsMC_20_30.root
+hadd Source file 2: ../output/Bs_MC_BDT_pt_20_30.root
+hadd Target path: ../sample/BsMC_a_20_30.root:/
+hadd Target path: ../sample/BsMC_a_20_30.root:/Bfinder
+hadd Target path: ../sample/BsMC_a_20_30.root:/hltanalysis
+hadd Target path: ../sample/BsMC_a_20_30.root:/hiEvtAnalyzer
+hadd Target path: ../sample/BsMC_a_20_30.root:/skimanalysis
+hadd Target file: ../sample/BsData_a_20_30.root
+hadd compression setting for all ouput: 1
+hadd Source file 1: ../sample/BsData_20_30.root
+hadd Source file 2: ../output/Bs_Data_BDT_pt_20_30.root
+hadd Target path: ../sample/BsData_a_20_30.root:/
+hadd Target path: ../sample/BsData_a_20_30.root:/Bfinder
+hadd Target path: ../sample/BsData_a_20_30.root:/hltanalysis
+hadd Target path: ../sample/BsData_a_20_30.root:/hiEvtAnalyzer
+hadd Target path: ../sample/BsData_a_20_30.root:/skimanalysis
+ptmin Now =  20      ptmax Now =   30
+pass  -1 
+
+  ====================================================
+ |                Cut Opt Configuration               |
+  ----------------------------------------------------
+ | Method     | BDT::BDT                              |
+pass  0 
+  ----------------------------------------------------
+ | Variable0  | Btrk1Pt                               |
+  ----------------------------------------------------
+ | Variable1  | Btrk2Pt                               |
+  ----------------------------------------------------
+ | Variable2  | abs(Btrk1Dz1/Btrk1DzError1)           |
+  ----------------------------------------------------
+ | Variable3  | abs(Btrk2Dz1/Btrk2DzError1)           |
+  ----------------------------------------------------
+ | Variable4  | abs(Btrk1Dxy1/Btrk1DxyError1)         |
+  ----------------------------------------------------
+ | Variable5  | abs(Btrk2Dxy1/Btrk2DxyError1)         |
+  ----------------------------------------------------
+ | Variable6  | abs(Btktkmass-1.019455)               |
+  ----------------------------------------------------
+ | Variable7  | BsvpvDistance/BsvpvDisErr             |
+  ----------------------------------------------------
+ | Variable8  | Balpha                                |
+  ----------------------------------------------------
+ | Variable9  | Bchi2cl                               |
+  ====================================================
+
+PASS = 0.143511
+PASS =  0.243511
+PASS =  0.343511
+pass  1 
+pass  1.1 
+Pass 1.2
+Pass 1.5
+BDTG Branch = BDT_pt_20_30
+SIGHIS = 16301
+BKGDHIS = 316
+Cut == ((abs(Btktkmass-1.019455)<0.015)&&(((((abs(Btktkmass-1.019455)<0.015)&& TMath::Abs(Bmumumass-3.096916)<0.15 && Bpt > 0 && Bpt < 5 && (abs(Btrk1Eta)<2.4 && abs(Btrk2Eta)<2.4 && Btrk1Pt>0.0 && Btrk2Pt>0.0) && Btrk1Pt > 0.2 && Btrk2Pt > 0.2  && Bchi2cl > 0.05 && BsvpvDistance/BsvpvDisErr > 2.0)  && ( (Bpt < 2 && Bpt > 0) || (Bpt < 3 && Bpt > 2) || (Bpt < 5 && Bpt > 3)  )))  ||  ( Bpt > 3 && ((HBHENoiseFilterResult == 1 && pPAprimaryVertexFilter == 1 && pBeamScrapingFilter == 1 && HLT_HIL1DoubleMu0_v1 == 1 && (abs(PVz)<15))  &&  (Bmu1isTriggered == 1 && Bmu2isTriggered == 1 ) &&  (Bchi2cl > 0.05 && BsvpvDistance/BsvpvDisErr > 2.0)    && (TMath::Abs(By)<2.4&&TMath::Abs(Bmumumass-3.096916)<0.15&&((abs(Bmu1eta)<1.2&&Bmu1pt>3.5)||(abs(Bmu1eta)>1.2&&abs(Bmu1eta)<2.1&&Bmu1pt>(5.47-1.89*abs(Bmu1eta)))||(abs(Bmu1eta)>2.1&&abs(Bmu1eta)<2.4&&Bmu1pt>1.5))&&((abs(Bmu2eta)<1.2&&Bmu2pt>3.5)||(abs(Bmu2eta)>1.2&&abs(Bmu2eta)<2.1&&Bmu2pt>(5.47-1.89*abs(Bmu2eta)))||(abs(Bmu2eta)>2.1&&abs(Bmu2eta)<2.4&&Bmu2pt>1.5))&&Bmu1InPixelLayer>0&&(Bmu1InPixelLayer+Bmu1InStripLayer)>5&&Bmu2InPixelLayer>0&&(Bmu2InPixelLayer+Bmu2InStripLayer)>5&&Bmu1dxyPV<0.3&&Bmu2dxyPV<0.3&&Bmu1dzPV<20&&Bmu2dzPV<20&&Bmu1isTrackerMuon&&Bmu2isTrackerMuon&&Bmu1isGlobalMuon&&Bmu2isGlobalMuon)  && ( Btrk1Pt > 0.2 && Btrk2Pt > 0.2 && abs(Btrk1Eta-0.0) < 2.4 && abs(Btrk2Eta-0.0) < 2.4  && Btrk1highPurity  && Btrk2highPurity  && Btrk1PixelHit + Btrk1StripHit > 10  && Btrk2PixelHit + Btrk2StripHit > 10) &&  (Btrk1PtErr/Btrk1Pt < 0.1)  &&  (Btrk2PtErr/Btrk2Pt < 0.1)    && Btrk1Chi2ndf/(Btrk1nStripLayer+Btrk1nPixelLayer) < 0.18   && Btrk2Chi2ndf/(Btrk2nStripLayer+Btrk2nPixelLayer) < 0.18 )))&& abs(Bmass - 5.36682 ) > 0.20 &&  abs(Bmass - 5.36682) < 0.30)&&Bpt>20.000000&&Bpt<30.000000
+pass  2 
+i = 0     hcountEffS->Integral(i+1,nMVA) = 16301     hcountEffS->Integral() = 16301   effS[i]  = 1
+i = 1     hcountEffS->Integral(i+1,nMVA) = 16301     hcountEffS->Integral() = 16301   effS[i]  = 1
+i = 2     hcountEffS->Integral(i+1,nMVA) = 16301     hcountEffS->Integral() = 16301   effS[i]  = 1
+i = 3     hcountEffS->Integral(i+1,nMVA) = 16301     hcountEffS->Integral() = 16301   effS[i]  = 1
+i = 4     hcountEffS->Integral(i+1,nMVA) = 16301     hcountEffS->Integral() = 16301   effS[i]  = 1
+i = 5     hcountEffS->Integral(i+1,nMVA) = 16301     hcountEffS->Integral() = 16301   effS[i]  = 1
+i = 6     hcountEffS->Integral(i+1,nMVA) = 16301     hcountEffS->Integral() = 16301   effS[i]  = 1
+i = 7     hcountEffS->Integral(i+1,nMVA) = 16301     hcountEffS->Integral() = 16301   effS[i]  = 1
+i = 8     hcountEffS->Integral(i+1,nMVA) = 16301     hcountEffS->Integral() = 16301   effS[i]  = 1
+i = 9     hcountEffS->Integral(i+1,nMVA) = 16301     hcountEffS->Integral() = 16301   effS[i]  = 1
+i = 10     hcountEffS->Integral(i+1,nMVA) = 16301     hcountEffS->Integral() = 16301   effS[i]  = 1
+i = 11     hcountEffS->Integral(i+1,nMVA) = 16301     hcountEffS->Integral() = 16301   effS[i]  = 1
+i = 12     hcountEffS->Integral(i+1,nMVA) = 16301     hcountEffS->Integral() = 16301   effS[i]  = 1
+i = 13     hcountEffS->Integral(i+1,nMVA) = 16301     hcountEffS->Integral() = 16301   effS[i]  = 1
+i = 14     hcountEffS->Integral(i+1,nMVA) = 16301     hcountEffS->Integral() = 16301   effS[i]  = 1
+i = 15     hcountEffS->Integral(i+1,nMVA) = 16301     hcountEffS->Integral() = 16301   effS[i]  = 1
+i = 16     hcountEffS->Integral(i+1,nMVA) = 16301     hcountEffS->Integral() = 16301   effS[i]  = 1
+i = 17     hcountEffS->Integral(i+1,nMVA) = 16301     hcountEffS->Integral() = 16301   effS[i]  = 1
+i = 18     hcountEffS->Integral(i+1,nMVA) = 16301     hcountEffS->Integral() = 16301   effS[i]  = 1
+i = 19     hcountEffS->Integral(i+1,nMVA) = 16301     hcountEffS->Integral() = 16301   effS[i]  = 1
+i = 20     hcountEffS->Integral(i+1,nMVA) = 16301     hcountEffS->Integral() = 16301   effS[i]  = 1
+i = 21     hcountEffS->Integral(i+1,nMVA) = 16301     hcountEffS->Integral() = 16301   effS[i]  = 1
+i = 22     hcountEffS->Integral(i+1,nMVA) = 16301     hcountEffS->Integral() = 16301   effS[i]  = 1
+i = 23     hcountEffS->Integral(i+1,nMVA) = 16301     hcountEffS->Integral() = 16301   effS[i]  = 1
+i = 24     hcountEffS->Integral(i+1,nMVA) = 16301     hcountEffS->Integral() = 16301   effS[i]  = 1
+i = 25     hcountEffS->Integral(i+1,nMVA) = 16301     hcountEffS->Integral() = 16301   effS[i]  = 1
+i = 26     hcountEffS->Integral(i+1,nMVA) = 16301     hcountEffS->Integral() = 16301   effS[i]  = 1
+i = 27     hcountEffS->Integral(i+1,nMVA) = 16301     hcountEffS->Integral() = 16301   effS[i]  = 1
+i = 28     hcountEffS->Integral(i+1,nMVA) = 16301     hcountEffS->Integral() = 16301   effS[i]  = 1
+i = 29     hcountEffS->Integral(i+1,nMVA) = 16301     hcountEffS->Integral() = 16301   effS[i]  = 1
+i = 30     hcountEffS->Integral(i+1,nMVA) = 16301     hcountEffS->Integral() = 16301   effS[i]  = 1
+i = 31     hcountEffS->Integral(i+1,nMVA) = 16301     hcountEffS->Integral() = 16301   effS[i]  = 1
+i = 32     hcountEffS->Integral(i+1,nMVA) = 16301     hcountEffS->Integral() = 16301   effS[i]  = 1
+i = 33     hcountEffS->Integral(i+1,nMVA) = 16301     hcountEffS->Integral() = 16301   effS[i]  = 1
+i = 34     hcountEffS->Integral(i+1,nMVA) = 16301     hcountEffS->Integral() = 16301   effS[i]  = 1
+i = 35     hcountEffS->Integral(i+1,nMVA) = 16301     hcountEffS->Integral() = 16301   effS[i]  = 1
+i = 36     hcountEffS->Integral(i+1,nMVA) = 16301     hcountEffS->Integral() = 16301   effS[i]  = 1
+i = 37     hcountEffS->Integral(i+1,nMVA) = 16301     hcountEffS->Integral() = 16301   effS[i]  = 1
+i = 38     hcountEffS->Integral(i+1,nMVA) = 16301     hcountEffS->Integral() = 16301   effS[i]  = 1
+i = 39     hcountEffS->Integral(i+1,nMVA) = 16301     hcountEffS->Integral() = 16301   effS[i]  = 1
+i = 40     hcountEffS->Integral(i+1,nMVA) = 16301     hcountEffS->Integral() = 16301   effS[i]  = 1
+i = 41     hcountEffS->Integral(i+1,nMVA) = 16301     hcountEffS->Integral() = 16301   effS[i]  = 1
+i = 42     hcountEffS->Integral(i+1,nMVA) = 16301     hcountEffS->Integral() = 16301   effS[i]  = 1
+i = 43     hcountEffS->Integral(i+1,nMVA) = 16301     hcountEffS->Integral() = 16301   effS[i]  = 1
+i = 44     hcountEffS->Integral(i+1,nMVA) = 16301     hcountEffS->Integral() = 16301   effS[i]  = 1
+i = 45     hcountEffS->Integral(i+1,nMVA) = 16301     hcountEffS->Integral() = 16301   effS[i]  = 1
+i = 46     hcountEffS->Integral(i+1,nMVA) = 16301     hcountEffS->Integral() = 16301   effS[i]  = 1
+i = 47     hcountEffS->Integral(i+1,nMVA) = 16301     hcountEffS->Integral() = 16301   effS[i]  = 1
+i = 48     hcountEffS->Integral(i+1,nMVA) = 16301     hcountEffS->Integral() = 16301   effS[i]  = 1
+i = 49     hcountEffS->Integral(i+1,nMVA) = 16301     hcountEffS->Integral() = 16301   effS[i]  = 1
+i = 50     hcountEffS->Integral(i+1,nMVA) = 16301     hcountEffS->Integral() = 16301   effS[i]  = 1
+i = 51     hcountEffS->Integral(i+1,nMVA) = 16301     hcountEffS->Integral() = 16301   effS[i]  = 1
+i = 52     hcountEffS->Integral(i+1,nMVA) = 16301     hcountEffS->Integral() = 16301   effS[i]  = 1
+i = 53     hcountEffS->Integral(i+1,nMVA) = 16301     hcountEffS->Integral() = 16301   effS[i]  = 1
+i = 54     hcountEffS->Integral(i+1,nMVA) = 16301     hcountEffS->Integral() = 16301   effS[i]  = 1
+i = 55     hcountEffS->Integral(i+1,nMVA) = 16301     hcountEffS->Integral() = 16301   effS[i]  = 1
+i = 56     hcountEffS->Integral(i+1,nMVA) = 16301     hcountEffS->Integral() = 16301   effS[i]  = 1
+i = 57     hcountEffS->Integral(i+1,nMVA) = 16301     hcountEffS->Integral() = 16301   effS[i]  = 1
+i = 58     hcountEffS->Integral(i+1,nMVA) = 16301     hcountEffS->Integral() = 16301   effS[i]  = 1
+i = 59     hcountEffS->Integral(i+1,nMVA) = 16301     hcountEffS->Integral() = 16301   effS[i]  = 1
+i = 60     hcountEffS->Integral(i+1,nMVA) = 16301     hcountEffS->Integral() = 16301   effS[i]  = 1
+i = 61     hcountEffS->Integral(i+1,nMVA) = 16301     hcountEffS->Integral() = 16301   effS[i]  = 1
+i = 62     hcountEffS->Integral(i+1,nMVA) = 16301     hcountEffS->Integral() = 16301   effS[i]  = 1
+i = 63     hcountEffS->Integral(i+1,nMVA) = 16301     hcountEffS->Integral() = 16301   effS[i]  = 1
+i = 64     hcountEffS->Integral(i+1,nMVA) = 16301     hcountEffS->Integral() = 16301   effS[i]  = 1
+i = 65     hcountEffS->Integral(i+1,nMVA) = 16301     hcountEffS->Integral() = 16301   effS[i]  = 1
+i = 66     hcountEffS->Integral(i+1,nMVA) = 16301     hcountEffS->Integral() = 16301   effS[i]  = 1
+i = 67     hcountEffS->Integral(i+1,nMVA) = 16301     hcountEffS->Integral() = 16301   effS[i]  = 1
+i = 68     hcountEffS->Integral(i+1,nMVA) = 16301     hcountEffS->Integral() = 16301   effS[i]  = 1
+i = 69     hcountEffS->Integral(i+1,nMVA) = 16301     hcountEffS->Integral() = 16301   effS[i]  = 1
+i = 70     hcountEffS->Integral(i+1,nMVA) = 16301     hcountEffS->Integral() = 16301   effS[i]  = 1
+i = 71     hcountEffS->Integral(i+1,nMVA) = 16301     hcountEffS->Integral() = 16301   effS[i]  = 1
+i = 72     hcountEffS->Integral(i+1,nMVA) = 16301     hcountEffS->Integral() = 16301   effS[i]  = 1
+i = 73     hcountEffS->Integral(i+1,nMVA) = 16301     hcountEffS->Integral() = 16301   effS[i]  = 1
+i = 74     hcountEffS->Integral(i+1,nMVA) = 16301     hcountEffS->Integral() = 16301   effS[i]  = 1
+i = 75     hcountEffS->Integral(i+1,nMVA) = 16301     hcountEffS->Integral() = 16301   effS[i]  = 1
+i = 76     hcountEffS->Integral(i+1,nMVA) = 16301     hcountEffS->Integral() = 16301   effS[i]  = 1
+i = 77     hcountEffS->Integral(i+1,nMVA) = 16301     hcountEffS->Integral() = 16301   effS[i]  = 1
+i = 78     hcountEffS->Integral(i+1,nMVA) = 16301     hcountEffS->Integral() = 16301   effS[i]  = 1
+i = 79     hcountEffS->Integral(i+1,nMVA) = 16301     hcountEffS->Integral() = 16301   effS[i]  = 1
+i = 80     hcountEffS->Integral(i+1,nMVA) = 16301     hcountEffS->Integral() = 16301   effS[i]  = 1
+i = 81     hcountEffS->Integral(i+1,nMVA) = 16300     hcountEffS->Integral() = 16301   effS[i]  = 0.999939
+i = 82     hcountEffS->Integral(i+1,nMVA) = 16300     hcountEffS->Integral() = 16301   effS[i]  = 0.999939
+i = 83     hcountEffS->Integral(i+1,nMVA) = 16299     hcountEffS->Integral() = 16301   effS[i]  = 0.999877
+i = 84     hcountEffS->Integral(i+1,nMVA) = 16297     hcountEffS->Integral() = 16301   effS[i]  = 0.999755
+i = 85     hcountEffS->Integral(i+1,nMVA) = 16297     hcountEffS->Integral() = 16301   effS[i]  = 0.999755
+i = 86     hcountEffS->Integral(i+1,nMVA) = 16297     hcountEffS->Integral() = 16301   effS[i]  = 0.999755
+i = 87     hcountEffS->Integral(i+1,nMVA) = 16297     hcountEffS->Integral() = 16301   effS[i]  = 0.999755
+i = 88     hcountEffS->Integral(i+1,nMVA) = 16296     hcountEffS->Integral() = 16301   effS[i]  = 0.999693
+i = 89     hcountEffS->Integral(i+1,nMVA) = 16295     hcountEffS->Integral() = 16301   effS[i]  = 0.999632
+i = 90     hcountEffS->Integral(i+1,nMVA) = 16294     hcountEffS->Integral() = 16301   effS[i]  = 0.999571
+i = 91     hcountEffS->Integral(i+1,nMVA) = 16293     hcountEffS->Integral() = 16301   effS[i]  = 0.999509
+i = 92     hcountEffS->Integral(i+1,nMVA) = 16292     hcountEffS->Integral() = 16301   effS[i]  = 0.999448
+i = 93     hcountEffS->Integral(i+1,nMVA) = 16291     hcountEffS->Integral() = 16301   effS[i]  = 0.999387
+i = 94     hcountEffS->Integral(i+1,nMVA) = 16288     hcountEffS->Integral() = 16301   effS[i]  = 0.999202
+i = 95     hcountEffS->Integral(i+1,nMVA) = 16285     hcountEffS->Integral() = 16301   effS[i]  = 0.999018
+i = 96     hcountEffS->Integral(i+1,nMVA) = 16277     hcountEffS->Integral() = 16301   effS[i]  = 0.998528
+i = 97     hcountEffS->Integral(i+1,nMVA) = 16267     hcountEffS->Integral() = 16301   effS[i]  = 0.997914
+i = 98     hcountEffS->Integral(i+1,nMVA) = 16252     hcountEffS->Integral() = 16301   effS[i]  = 0.996994
+i = 99     hcountEffS->Integral(i+1,nMVA) = 16237     hcountEffS->Integral() = 16301   effS[i]  = 0.996074
+i = 100     hcountEffS->Integral(i+1,nMVA) = 16217     hcountEffS->Integral() = 16301   effS[i]  = 0.994847
+i = 101     hcountEffS->Integral(i+1,nMVA) = 16196     hcountEffS->Integral() = 16301   effS[i]  = 0.993559
+i = 102     hcountEffS->Integral(i+1,nMVA) = 16168     hcountEffS->Integral() = 16301   effS[i]  = 0.991841
+i = 103     hcountEffS->Integral(i+1,nMVA) = 16125     hcountEffS->Integral() = 16301   effS[i]  = 0.989203
+i = 104     hcountEffS->Integral(i+1,nMVA) = 16084     hcountEffS->Integral() = 16301   effS[i]  = 0.986688
+i = 105     hcountEffS->Integral(i+1,nMVA) = 16033     hcountEffS->Integral() = 16301   effS[i]  = 0.983559
+i = 106     hcountEffS->Integral(i+1,nMVA) = 15982     hcountEffS->Integral() = 16301   effS[i]  = 0.980431
+i = 107     hcountEffS->Integral(i+1,nMVA) = 15894     hcountEffS->Integral() = 16301   effS[i]  = 0.975032
+i = 108     hcountEffS->Integral(i+1,nMVA) = 15807     hcountEffS->Integral() = 16301   effS[i]  = 0.969695
+i = 109     hcountEffS->Integral(i+1,nMVA) = 15693     hcountEffS->Integral() = 16301   effS[i]  = 0.962702
+i = 110     hcountEffS->Integral(i+1,nMVA) = 15552     hcountEffS->Integral() = 16301   effS[i]  = 0.954052
+i = 111     hcountEffS->Integral(i+1,nMVA) = 15412     hcountEffS->Integral() = 16301   effS[i]  = 0.945463
+i = 112     hcountEffS->Integral(i+1,nMVA) = 15242     hcountEffS->Integral() = 16301   effS[i]  = 0.935035
+i = 113     hcountEffS->Integral(i+1,nMVA) = 15042     hcountEffS->Integral() = 16301   effS[i]  = 0.922765
+i = 114     hcountEffS->Integral(i+1,nMVA) = 14826     hcountEffS->Integral() = 16301   effS[i]  = 0.909515
+i = 115     hcountEffS->Integral(i+1,nMVA) = 14571     hcountEffS->Integral() = 16301   effS[i]  = 0.893872
+i = 116     hcountEffS->Integral(i+1,nMVA) = 14251     hcountEffS->Integral() = 16301   effS[i]  = 0.874241
+i = 117     hcountEffS->Integral(i+1,nMVA) = 13917     hcountEffS->Integral() = 16301   effS[i]  = 0.853751
+i = 118     hcountEffS->Integral(i+1,nMVA) = 13573     hcountEffS->Integral() = 16301   effS[i]  = 0.832648
+i = 119     hcountEffS->Integral(i+1,nMVA) = 13190     hcountEffS->Integral() = 16301   effS[i]  = 0.809153
+i = 120     hcountEffS->Integral(i+1,nMVA) = 12784     hcountEffS->Integral() = 16301   effS[i]  = 0.784246
+i = 121     hcountEffS->Integral(i+1,nMVA) = 12373     hcountEffS->Integral() = 16301   effS[i]  = 0.759033
+i = 122     hcountEffS->Integral(i+1,nMVA) = 11906     hcountEffS->Integral() = 16301   effS[i]  = 0.730385
+i = 123     hcountEffS->Integral(i+1,nMVA) = 11343     hcountEffS->Integral() = 16301   effS[i]  = 0.695847
+i = 124     hcountEffS->Integral(i+1,nMVA) = 10778     hcountEffS->Integral() = 16301   effS[i]  = 0.661186
+i = 125     hcountEffS->Integral(i+1,nMVA) = 10135     hcountEffS->Integral() = 16301   effS[i]  = 0.621741
+i = 126     hcountEffS->Integral(i+1,nMVA) = 9477     hcountEffS->Integral() = 16301   effS[i]  = 0.581375
+i = 127     hcountEffS->Integral(i+1,nMVA) = 8665     hcountEffS->Integral() = 16301   effS[i]  = 0.531563
+i = 128     hcountEffS->Integral(i+1,nMVA) = 7855     hcountEffS->Integral() = 16301   effS[i]  = 0.481872
+i = 129     hcountEffS->Integral(i+1,nMVA) = 7026     hcountEffS->Integral() = 16301   effS[i]  = 0.431017
+i = 130     hcountEffS->Integral(i+1,nMVA) = 6106     hcountEffS->Integral() = 16301   effS[i]  = 0.374578
+i = 131     hcountEffS->Integral(i+1,nMVA) = 5213     hcountEffS->Integral() = 16301   effS[i]  = 0.319796
+i = 132     hcountEffS->Integral(i+1,nMVA) = 4275     hcountEffS->Integral() = 16301   effS[i]  = 0.262254
+i = 133     hcountEffS->Integral(i+1,nMVA) = 3414     hcountEffS->Integral() = 16301   effS[i]  = 0.209435
+i = 134     hcountEffS->Integral(i+1,nMVA) = 2600     hcountEffS->Integral() = 16301   effS[i]  = 0.159499
+i = 135     hcountEffS->Integral(i+1,nMVA) = 1940     hcountEffS->Integral() = 16301   effS[i]  = 0.119011
+i = 136     hcountEffS->Integral(i+1,nMVA) = 1369     hcountEffS->Integral() = 16301   effS[i]  = 0.0839826
+i = 137     hcountEffS->Integral(i+1,nMVA) = 934     hcountEffS->Integral() = 16301   effS[i]  = 0.0572971
+i = 138     hcountEffS->Integral(i+1,nMVA) = 595     hcountEffS->Integral() = 16301   effS[i]  = 0.0365008
+i = 139     hcountEffS->Integral(i+1,nMVA) = 336     hcountEffS->Integral() = 16301   effS[i]  = 0.0206122
+i = 140     hcountEffS->Integral(i+1,nMVA) = 172     hcountEffS->Integral() = 16301   effS[i]  = 0.0105515
+i = 141     hcountEffS->Integral(i+1,nMVA) = 95     hcountEffS->Integral() = 16301   effS[i]  = 0.00582786
+i = 142     hcountEffS->Integral(i+1,nMVA) = 39     hcountEffS->Integral() = 16301   effS[i]  = 0.00239249
+i = 143     hcountEffS->Integral(i+1,nMVA) = 17     hcountEffS->Integral() = 16301   effS[i]  = 0.00104288
+i = 144     hcountEffS->Integral(i+1,nMVA) = 6     hcountEffS->Integral() = 16301   effS[i]  = 0.000368076
+i = 145     hcountEffS->Integral(i+1,nMVA) = 2     hcountEffS->Integral() = 16301   effS[i]  = 0.000122692
+i = 146     hcountEffS->Integral(i+1,nMVA) = 0     hcountEffS->Integral() = 16301   effS[i]  = 0
+i = 147     hcountEffS->Integral(i+1,nMVA) = 0     hcountEffS->Integral() = 16301   effS[i]  = 0
+i = 148     hcountEffS->Integral(i+1,nMVA) = 0     hcountEffS->Integral() = 16301   effS[i]  = 0
+i = 149     hcountEffS->Integral(i+1,nMVA) = 0     hcountEffS->Integral() = 16301   effS[i]  = 0
+i = 150     hcountEffS->Integral(i+1,nMVA) = 0     hcountEffS->Integral() = 16301   effS[i]  = 0
+i = 151     hcountEffS->Integral(i+1,nMVA) = 0     hcountEffS->Integral() = 16301   effS[i]  = 0
+i = 152     hcountEffS->Integral(i+1,nMVA) = 0     hcountEffS->Integral() = 16301   effS[i]  = 0
+i = 153     hcountEffS->Integral(i+1,nMVA) = 0     hcountEffS->Integral() = 16301   effS[i]  = 0
+i = 154     hcountEffS->Integral(i+1,nMVA) = 0     hcountEffS->Integral() = 16301   effS[i]  = 0
+i = 155     hcountEffS->Integral(i+1,nMVA) = 0     hcountEffS->Integral() = 16301   effS[i]  = 0
+i = 156     hcountEffS->Integral(i+1,nMVA) = 0     hcountEffS->Integral() = 16301   effS[i]  = 0
+i = 157     hcountEffS->Integral(i+1,nMVA) = 0     hcountEffS->Integral() = 16301   effS[i]  = 0
+i = 158     hcountEffS->Integral(i+1,nMVA) = 0     hcountEffS->Integral() = 16301   effS[i]  = 0
+i = 159     hcountEffS->Integral(i+1,nMVA) = 0     hcountEffS->Integral() = 16301   effS[i]  = 0
+i = 160     hcountEffS->Integral(i+1,nMVA) = 0     hcountEffS->Integral() = 16301   effS[i]  = 0
+i = 161     hcountEffS->Integral(i+1,nMVA) = 0     hcountEffS->Integral() = 16301   effS[i]  = 0
+i = 162     hcountEffS->Integral(i+1,nMVA) = 0     hcountEffS->Integral() = 16301   effS[i]  = 0
+i = 163     hcountEffS->Integral(i+1,nMVA) = 0     hcountEffS->Integral() = 16301   effS[i]  = 0
+i = 164     hcountEffS->Integral(i+1,nMVA) = 0     hcountEffS->Integral() = 16301   effS[i]  = 0
+i = 165     hcountEffS->Integral(i+1,nMVA) = 0     hcountEffS->Integral() = 16301   effS[i]  = 0
+i = 166     hcountEffS->Integral(i+1,nMVA) = 0     hcountEffS->Integral() = 16301   effS[i]  = 0
+i = 167     hcountEffS->Integral(i+1,nMVA) = 0     hcountEffS->Integral() = 16301   effS[i]  = 0
+i = 168     hcountEffS->Integral(i+1,nMVA) = 0     hcountEffS->Integral() = 16301   effS[i]  = 0
+i = 169     hcountEffS->Integral(i+1,nMVA) = 0     hcountEffS->Integral() = 16301   effS[i]  = 0
+i = 170     hcountEffS->Integral(i+1,nMVA) = 0     hcountEffS->Integral() = 16301   effS[i]  = 0
+i = 171     hcountEffS->Integral(i+1,nMVA) = 0     hcountEffS->Integral() = 16301   effS[i]  = 0
+i = 172     hcountEffS->Integral(i+1,nMVA) = 0     hcountEffS->Integral() = 16301   effS[i]  = 0
+i = 173     hcountEffS->Integral(i+1,nMVA) = 0     hcountEffS->Integral() = 16301   effS[i]  = 0
+i = 174     hcountEffS->Integral(i+1,nMVA) = 0     hcountEffS->Integral() = 16301   effS[i]  = 0
+i = 175     hcountEffS->Integral(i+1,nMVA) = 0     hcountEffS->Integral() = 16301   effS[i]  = 0
+i = 176     hcountEffS->Integral(i+1,nMVA) = 0     hcountEffS->Integral() = 16301   effS[i]  = 0
+i = 177     hcountEffS->Integral(i+1,nMVA) = 0     hcountEffS->Integral() = 16301   effS[i]  = 0
+i = 178     hcountEffS->Integral(i+1,nMVA) = 0     hcountEffS->Integral() = 16301   effS[i]  = 0
+i = 179     hcountEffS->Integral(i+1,nMVA) = 0     hcountEffS->Integral() = 16301   effS[i]  = 0
+i = 180     hcountEffS->Integral(i+1,nMVA) = 0     hcountEffS->Integral() = 16301   effS[i]  = 0
+i = 181     hcountEffS->Integral(i+1,nMVA) = 0     hcountEffS->Integral() = 16301   effS[i]  = 0
+i = 182     hcountEffS->Integral(i+1,nMVA) = 0     hcountEffS->Integral() = 16301   effS[i]  = 0
+i = 183     hcountEffS->Integral(i+1,nMVA) = 0     hcountEffS->Integral() = 16301   effS[i]  = 0
+i = 184     hcountEffS->Integral(i+1,nMVA) = 0     hcountEffS->Integral() = 16301   effS[i]  = 0
+i = 185     hcountEffS->Integral(i+1,nMVA) = 0     hcountEffS->Integral() = 16301   effS[i]  = 0
+i = 186     hcountEffS->Integral(i+1,nMVA) = 0     hcountEffS->Integral() = 16301   effS[i]  = 0
+i = 187     hcountEffS->Integral(i+1,nMVA) = 0     hcountEffS->Integral() = 16301   effS[i]  = 0
+i = 188     hcountEffS->Integral(i+1,nMVA) = 0     hcountEffS->Integral() = 16301   effS[i]  = 0
+i = 189     hcountEffS->Integral(i+1,nMVA) = 0     hcountEffS->Integral() = 16301   effS[i]  = 0
+i = 190     hcountEffS->Integral(i+1,nMVA) = 0     hcountEffS->Integral() = 16301   effS[i]  = 0
+i = 191     hcountEffS->Integral(i+1,nMVA) = 0     hcountEffS->Integral() = 16301   effS[i]  = 0
+i = 192     hcountEffS->Integral(i+1,nMVA) = 0     hcountEffS->Integral() = 16301   effS[i]  = 0
+i = 193     hcountEffS->Integral(i+1,nMVA) = 0     hcountEffS->Integral() = 16301   effS[i]  = 0
+i = 194     hcountEffS->Integral(i+1,nMVA) = 0     hcountEffS->Integral() = 16301   effS[i]  = 0
+i = 195     hcountEffS->Integral(i+1,nMVA) = 0     hcountEffS->Integral() = 16301   effS[i]  = 0
+i = 196     hcountEffS->Integral(i+1,nMVA) = 0     hcountEffS->Integral() = 16301   effS[i]  = 0
+i = 197     hcountEffS->Integral(i+1,nMVA) = 0     hcountEffS->Integral() = 16301   effS[i]  = 0
+i = 198     hcountEffS->Integral(i+1,nMVA) = 0     hcountEffS->Integral() = 16301   effS[i]  = 0
+i = 199     hcountEffS->Integral(i+1,nMVA) = 0     hcountEffS->Integral() = 16301   effS[i]  = 0
+pass  3 
+pass  4 
+pass  5 
+pass  6 
+weightfunctiongen = weight
+FONLL = fonlls/fo_pp_Bplus_5p03TeV_y2p4.dat
+ptmin = 20  ptmax = 30
+pass  7 
+nbin = 41
+Gen Cut = weight*((TMath::Abs(Gy)<2.4&&TMath::Abs(GpdgId)==531&&GisSignal>0)&&Gpt>20.000000&&Gpt<30.000000)
+Total Signal = 16301
+Total Generated = 95099
+norm = 0.103
+htheoryreco->Integral() = 879658
+nS = 428.473
+nB = 252.799
+
+Looking for max significance ...
+pass  8 
+Doing New Stat Model
+S = 428.473
+B = 252.799
+Doing New Stat Model
+S = 428.473
+B = 252.799
+Doing New Stat Model
+S = 428.473
+B = 252.799
+Doing New Stat Model
+S = 428.473
+B = 252.799
+Doing New Stat Model
+S = 428.473
+B = 252.799
+Doing New Stat Model
+S = 428.473
+B = 252.799
+Doing New Stat Model
+S = 428.473
+B = 252.799
+Doing New Stat Model
+S = 428.473
+B = 252.799
+Doing New Stat Model
+S = 428.473
+B = 252.799
+Doing New Stat Model
+S = 428.473
+B = 252.799
+Doing New Stat Model
+S = 428.473
+B = 252.799
+Doing New Stat Model
+S = 428.473
+B = 252.799
+Doing New Stat Model
+S = 428.473
+B = 252.799
+Doing New Stat Model
+S = 428.473
+B = 252.799
+Doing New Stat Model
+S = 428.473
+B = 252.799
+Doing New Stat Model
+S = 428.473
+B = 252.799
+Doing New Stat Model
+S = 428.473
+B = 252.799
+Doing New Stat Model
+S = 428.473
+B = 252.799
+Doing New Stat Model
+S = 428.473
+B = 252.799
+Doing New Stat Model
+S = 428.473
+B = 252.799
+Doing New Stat Model
+S = 428.473
+B = 252.799
+Doing New Stat Model
+S = 428.473
+B = 252.799
+Doing New Stat Model
+S = 428.473
+B = 252.799
+Doing New Stat Model
+S = 428.473
+B = 252.799
+Doing New Stat Model
+S = 428.473
+B = 252.799
+Doing New Stat Model
+S = 428.473
+B = 252.799
+Doing New Stat Model
+S = 428.473
+B = 252.799
+Doing New Stat Model
+S = 428.473
+B = 252.799
+Doing New Stat Model
+S = 428.473
+B = 252.799
+Doing New Stat Model
+S = 428.473
+B = 252.799
+Doing New Stat Model
+S = 428.473
+B = 252.799
+Doing New Stat Model
+S = 428.473
+B = 252.799
+Doing New Stat Model
+S = 428.473
+B = 252.799
+Doing New Stat Model
+S = 428.473
+B = 252.799
+Doing New Stat Model
+S = 428.473
+B = 252.799
+Doing New Stat Model
+S = 428.473
+B = 252.799
+Doing New Stat Model
+S = 428.473
+B = 252.799
+Doing New Stat Model
+S = 428.473
+B = 252.799
+Doing New Stat Model
+S = 428.473
+B = 252.799
+Doing New Stat Model
+S = 428.473
+B = 252.799
+Doing New Stat Model
+S = 428.473
+B = 252.799
+Doing New Stat Model
+S = 428.473
+B = 252.799
+Doing New Stat Model
+S = 428.473
+B = 252.799
+Doing New Stat Model
+S = 428.473
+B = 252.799
+Doing New Stat Model
+S = 428.473
+B = 252.799
+Doing New Stat Model
+S = 428.473
+B = 252.799
+Doing New Stat Model
+S = 428.473
+B = 252.799
+Doing New Stat Model
+S = 428.473
+B = 252.799
+Doing New Stat Model
+S = 428.473
+B = 252.799
+Doing New Stat Model
+S = 428.473
+B = 252.799
+Doing New Stat Model
+S = 428.473
+B = 252.799
+Doing New Stat Model
+S = 428.473
+B = 252.799
+Doing New Stat Model
+S = 428.473
+B = 252.799
+Doing New Stat Model
+S = 428.473
+B = 252.799
+Doing New Stat Model
+S = 428.473
+B = 252.799
+Doing New Stat Model
+S = 428.473
+B = 252.799
+Doing New Stat Model
+S = 428.473
+B = 252.799
+Doing New Stat Model
+S = 428.473
+B = 252.799
+Doing New Stat Model
+S = 428.473
+B = 252.799
+Doing New Stat Model
+S = 428.473
+B = 252.799
+Doing New Stat Model
+S = 428.473
+B = 252.799
+Doing New Stat Model
+S = 428.473
+B = 252.799
+Doing New Stat Model
+S = 428.473
+B = 252.799
+Doing New Stat Model
+S = 428.473
+B = 252.799
+Doing New Stat Model
+S = 428.473
+B = 252.799
+Doing New Stat Model
+S = 428.473
+B = 252.799
+Doing New Stat Model
+S = 428.473
+B = 252.799
+Doing New Stat Model
+S = 428.473
+B = 252.799
+Doing New Stat Model
+S = 428.473
+B = 252.799
+Doing New Stat Model
+S = 428.473
+B = 252.799
+Doing New Stat Model
+S = 428.473
+B = 252.799
+Doing New Stat Model
+S = 428.473
+B = 252.799
+Doing New Stat Model
+S = 428.473
+B = 252.799
+Doing New Stat Model
+S = 428.473
+B = 252.799
+Doing New Stat Model
+S = 428.473
+B = 252.799
+Doing New Stat Model
+S = 428.473
+B = 252.799
+Doing New Stat Model
+S = 428.473
+B = 251.999
+Doing New Stat Model
+S = 428.473
+B = 251.199
+Doing New Stat Model
+S = 428.473
+B = 250.399
+Doing New Stat Model
+S = 428.473
+B = 250.399
+Doing New Stat Model
+S = 428.473
+B = 248.799
+Doing New Stat Model
+S = 428.447
+B = 245.599
+Doing New Stat Model
+S = 428.447
+B = 238.399
+Doing New Stat Model
+S = 428.42
+B = 235.999
+Doing New Stat Model
+S = 428.368
+B = 231.999
+Doing New Stat Model
+S = 428.368
+B = 226.399
+Doing New Stat Model
+S = 428.368
+B = 219.999
+Doing New Stat Model
+S = 428.368
+B = 210.399
+Doing New Stat Model
+S = 428.342
+B = 205.599
+Doing New Stat Model
+S = 428.315
+B = 200.799
+Doing New Stat Model
+S = 428.289
+B = 191.999
+Doing New Stat Model
+S = 428.263
+B = 187.199
+Doing New Stat Model
+S = 428.236
+B = 183.199
+Doing New Stat Model
+S = 428.21
+B = 177.599
+Doing New Stat Model
+S = 428.131
+B = 170.399
+Doing New Stat Model
+S = 428.052
+B = 161.599
+Doing New Stat Model
+S = 427.842
+B = 153.599
+Doing New Stat Model
+S = 427.579
+B = 137.599
+Doing New Stat Model
+S = 427.185
+B = 129.599
+Doing New Stat Model
+S = 426.791
+B = 121.599
+Doing New Stat Model
+S = 426.265
+B = 113.599
+Doing New Stat Model
+S = 425.713
+B = 107.199
+Doing New Stat Model
+S = 424.977
+B = 99.9995
+Doing New Stat Model
+S = 423.847
+B = 93.5996
+Doing New Stat Model
+S = 422.769
+B = 87.1996
+Doing New Stat Model
+S = 421.429
+B = 80.7996
+Doing New Stat Model
+S = 420.088
+B = 74.3997
+Doing New Stat Model
+S = 417.775
+B = 70.3997
+Doing New Stat Model
+S = 415.488
+B = 63.9997
+Doing New Stat Model
+S = 412.492
+B = 58.3997
+Doing New Stat Model
+S = 408.785
+B = 55.1997
+Doing New Stat Model
+S = 405.106
+B = 51.1998
+Doing New Stat Model
+S = 400.637
+B = 47.1998
+Doing New Stat Model
+S = 395.38
+B = 43.1998
+Doing New Stat Model
+S = 389.702
+B = 41.5998
+Doing New Stat Model
+S = 383
+B = 36.7998
+Doing New Stat Model
+S = 374.589
+B = 32.7998
+Doing New Stat Model
+S = 365.809
+B = 32.7998
+Doing New Stat Model
+S = 356.767
+B = 28.7999
+Doing New Stat Model
+S = 346.7
+B = 26.3999
+Doing New Stat Model
+S = 336.028
+B = 22.3999
+Doing New Stat Model
+S = 325.225
+B = 19.9999
+Doing New Stat Model
+S = 312.95
+B = 16.7999
+Doing New Stat Model
+S = 298.152
+B = 13.5999
+Doing New Stat Model
+S = 283.301
+B = 10.4
+Doing New Stat Model
+S = 266.399
+B = 10.4
+Doing New Stat Model
+S = 249.104
+B = 9.59995
+Doing New Stat Model
+S = 227.76
+B = 7.99996
+Doing New Stat Model
+S = 206.469
+B = 7.19997
+Doing New Stat Model
+S = 184.679
+B = 6.39997
+Doing New Stat Model
+S = 160.497
+B = 5.59997
+Doing New Stat Model
+S = 137.024
+B = 4.79998
+Doing New Stat Model
+S = 112.369
+B = 3.99998
+Doing New Stat Model
+S = 89.7372
+B = 3.19998
+Doing New Stat Model
+S = 68.3412
+B = 2.39999
+Doing New Stat Model
+S = 50.993
+B = 2.39999
+Doing New Stat Model
+S = 35.9843
+B = 2.39999
+Doing New Stat Model
+S = 24.5503
+B = 2.39999
+Doing New Stat Model
+S = 15.6396
+B = 1.59999
+Doing New Stat Model
+S = 8.83178
+B = 1.59999
+Doing New Stat Model
+S = 4.52103
+B = 0.799996
+Doing New Stat Model
+S = 2.49708
+B = 0.799996
+Doing New Stat Model
+S = 1.02512
+B = 0.799996
+Doing New Stat Model
+S = 0.446846
+B = 0.799996
+Doing New Stat Model
+S = 0.15771
+B = 0
+Doing New Stat Model
+S = 0.0525701
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+
+  ==========================================================
+ |                         Opt Result                       |
+  ----------------------------------------------------------
+ | pT              | 20.0 - 30.0 GeV/c                      |
+  ----------------------------------------------------------
+ | RAA             | 1                                      |
+  ----------------------------------------------------------
+ | Sig reg         | +- 0.08   | Sideband bkg  | 316        |
+  ----------------------------------------------------------
+ | weight S        | 428       | weight B      | 253        |
+  ----------------------------------------------------------
+ | S               | 412       | B             | 58         |
+  ----------------------------------------------------------
+ | effS            | 0.962702  | sig           | 19.46      |
+  ----------------------------------------------------------
+ | BDT                                 | 0.09               |
+  ==========================================================
+
+ptmin Now =       ptmax Now =  
+  Error: invalid argument number - readxml()
+ptmin Now =       ptmax Now =  
+  Error: invalid argument number - readxml()
+ptmin Now =       ptmax Now =  
+  Error: invalid argument number - readxml()
+ptmin Now =       ptmax Now =  
+  Error: invalid argument number - readxml()

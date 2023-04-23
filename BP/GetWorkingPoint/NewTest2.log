@@ -1,0 +1,4781 @@
+ptmin Now =  3      ptmax Now =   5
+ptmin = 3   ptmax = 5
+pass  -1 
+
+  ====================================================
+ |                Cut Opt Configuration               |
+  ----------------------------------------------------
+ | Method     | BDT::BDT                              |
+pass  0 
+  ----------------------------------------------------
+ | Variable0  | Btrk1Pt                               |
+  ----------------------------------------------------
+ | Variable1  | abs(Btrk1Dz1/Btrk1DzError1)           |
+  ----------------------------------------------------
+ | Variable2  | abs(Btrk1Dxy1/Btrk1DxyError1)         |
+  ----------------------------------------------------
+ | Variable3  | BsvpvDistance/BsvpvDisErr             |
+  ----------------------------------------------------
+ | Variable4  | Balpha                                |
+  ----------------------------------------------------
+ | Variable5  | Bchi2cl                               |
+  ====================================================
+
+PASS = 0.04
+PASS = 0.05
+PASS = 0.06
+PASS = 0.07
+PASS = 0.08
+PASS = 0.1866763547
+PASS =  0.2866763547
+PASS =  0.3866763547
+weightfunctionreco = pthat*weight
+pass  1 
+pass  1.1 
+Pass 1.2
+Pass 1.5
+BDTG Branch = BDT_pt_3_5
+SIGHIS = 0.0022333
+BKGDHIS = 154346
+Cut == (Btrk1Pt > 0.2 && Bchi2cl > 0.05 && BsvpvDistance/BsvpvDisErr > 2.0 && Bpt > 2 && abs(Btrk1Eta-0.0) < 2.4  && (TMath::Abs(By)<2.4&&TMath::Abs(Bmumumass-3.096916)<0.15&&((abs(Bmu1eta)<1.2&&Bmu1pt>3.5)||(abs(Bmu1eta)>1.2&&abs(Bmu1eta)<2.1&&Bmu1pt>(5.47-1.89*abs(Bmu1eta)))||(abs(Bmu1eta)>2.1&&abs(Bmu1eta)<2.4&&Bmu1pt>1.5))&&((abs(Bmu2eta)<1.2&&Bmu2pt>3.5)||(abs(Bmu2eta)>1.2&&abs(Bmu2eta)<2.1&&Bmu2pt>(5.47-1.89*abs(Bmu2eta)))||(abs(Bmu2eta)>2.1&&abs(Bmu2eta)<2.4&&Bmu2pt>1.5))&&Bmu1TMOneStationTight&&Bmu2TMOneStationTight&&Bmu1InPixelLayer>0&&(Bmu1InPixelLayer+Bmu1InStripLayer)>5&&Bmu2InPixelLayer>0&&(Bmu2InPixelLayer+Bmu2InStripLayer)>5&&Bmu1dxyPV<0.3&&Bmu2dxyPV<0.3&&Bmu1dzPV<20&&Bmu2dzPV<20&&Bmu1isTrackerMuon&&Bmu2isTrackerMuon&&Bmu1isGlobalMuon&&Bmu2isGlobalMuon&&Btrk1highPurity&&abs(Btrk1Eta)<2.4&&Btrk1Pt>0.2)  && (Btrk1PixelHit + Btrk1StripHit > 10) &&  (Btrk1PtErr/Btrk1Pt < 0.1)&& Btrk1Chi2ndf/(Btrk1nStripLayer+Btrk1nPixelLayer) < 0.18   && (abs(PVz)<15)&& ((Bmass - 5.27929 ) > 0.25 &&  (Bmass - 5.27929) < 0.30))&&Bpt>3.000000&&Bpt<5.000000
+pass  2 
+pass  3 
+pass  4 
+pass  5 
+pass  6 
+cutb = (Btrk1Pt > 0.2 && Bchi2cl > 0.05 && BsvpvDistance/BsvpvDisErr > 2.0 && Bpt > 2 && abs(Btrk1Eta-0.0) < 2.4  && (TMath::Abs(By)<2.4&&TMath::Abs(Bmumumass-3.096916)<0.15&&((abs(Bmu1eta)<1.2&&Bmu1pt>3.5)||(abs(Bmu1eta)>1.2&&abs(Bmu1eta)<2.1&&Bmu1pt>(5.47-1.89*abs(Bmu1eta)))||(abs(Bmu1eta)>2.1&&abs(Bmu1eta)<2.4&&Bmu1pt>1.5))&&((abs(Bmu2eta)<1.2&&Bmu2pt>3.5)||(abs(Bmu2eta)>1.2&&abs(Bmu2eta)<2.1&&Bmu2pt>(5.47-1.89*abs(Bmu2eta)))||(abs(Bmu2eta)>2.1&&abs(Bmu2eta)<2.4&&Bmu2pt>1.5))&&Bmu1TMOneStationTight&&Bmu2TMOneStationTight&&Bmu1InPixelLayer>0&&(Bmu1InPixelLayer+Bmu1InStripLayer)>5&&Bmu2InPixelLayer>0&&(Bmu2InPixelLayer+Bmu2InStripLayer)>5&&Bmu1dxyPV<0.3&&Bmu2dxyPV<0.3&&Bmu1dzPV<20&&Bmu2dzPV<20&&Bmu1isTrackerMuon&&Bmu2isTrackerMuon&&Bmu1isGlobalMuon&&Bmu2isGlobalMuon&&Btrk1highPurity&&abs(Btrk1Eta)<2.4&&Btrk1Pt>0.2)  && (Btrk1PixelHit + Btrk1StripHit > 10) &&  (Btrk1PtErr/Btrk1Pt < 0.1)&& Btrk1Chi2ndf/(Btrk1nStripLayer+Btrk1nPixelLayer) < 0.18   && (abs(PVz)<15)&& ((Bmass - 5.27929 ) > 0.25 &&  (Bmass - 5.27929) < 0.30))&&Bpt>3.000000&&Bpt<5.000000
+nB Before Bro: = 246952
+nB After Bro: = 493905
+weightfunctiongen = pthat*weight
+FONLL = fonlls/fo_pp_Bplus_5p03TeV_y2p4.dat
+ptmin = 3  ptmax = 5
+pass  7 
+nbin = 9
+Gen Cut = pthat*weight*((abs(Gy)<2.4&&abs(GpdgId)==521&&GisSignal==1)&&Gpt>3.000000&&Gpt<5.000000)
+Total Signal = 0.0022333
+Total Generated = 0.556091
+Inside Fucked:   ptmin = 5  ptmax = 5
+norm = 0.401
+htheoryreco->Integral() = 724244
+nS = 2651.19
+nB = 493905
+
+Looking for max significance ...
+pass  8 
+Doing New Stat Model
+S = 2651.19
+B = 493905
+Doing New Stat Model
+S = 2651.19
+B = 493905
+Doing New Stat Model
+S = 2651.19
+B = 493905
+Doing New Stat Model
+S = 2651.19
+B = 493905
+Doing New Stat Model
+S = 2651.19
+B = 493905
+Doing New Stat Model
+S = 2651.19
+B = 493905
+Doing New Stat Model
+S = 2651.19
+B = 493905
+Doing New Stat Model
+S = 2651.19
+B = 493905
+Doing New Stat Model
+S = 2651.19
+B = 493905
+Doing New Stat Model
+S = 2651.19
+B = 493905
+Doing New Stat Model
+S = 2651.19
+B = 493905
+Doing New Stat Model
+S = 2651.19
+B = 493905
+Doing New Stat Model
+S = 2651.19
+B = 493905
+Doing New Stat Model
+S = 2651.19
+B = 493905
+Doing New Stat Model
+S = 2651.19
+B = 493905
+Doing New Stat Model
+S = 2651.19
+B = 493905
+Doing New Stat Model
+S = 2651.19
+B = 493905
+Doing New Stat Model
+S = 2651.19
+B = 493905
+Doing New Stat Model
+S = 2651.19
+B = 493905
+Doing New Stat Model
+S = 2651.19
+B = 493905
+Doing New Stat Model
+S = 2651.19
+B = 493905
+Doing New Stat Model
+S = 2651.19
+B = 493905
+Doing New Stat Model
+S = 2651.19
+B = 493905
+Doing New Stat Model
+S = 2651.19
+B = 493905
+Doing New Stat Model
+S = 2651.19
+B = 493905
+Doing New Stat Model
+S = 2651.19
+B = 493905
+Doing New Stat Model
+S = 2651.19
+B = 493905
+Doing New Stat Model
+S = 2651.19
+B = 493905
+Doing New Stat Model
+S = 2651.19
+B = 493905
+Doing New Stat Model
+S = 2651.19
+B = 493905
+Doing New Stat Model
+S = 2651.19
+B = 493905
+Doing New Stat Model
+S = 2651.19
+B = 493905
+Doing New Stat Model
+S = 2651.19
+B = 493905
+Doing New Stat Model
+S = 2651.19
+B = 493905
+Doing New Stat Model
+S = 2651.19
+B = 493905
+Doing New Stat Model
+S = 2651.19
+B = 493905
+Doing New Stat Model
+S = 2651.19
+B = 493905
+Doing New Stat Model
+S = 2651.19
+B = 493905
+Doing New Stat Model
+S = 2651.19
+B = 493905
+Doing New Stat Model
+S = 2651.19
+B = 493905
+Doing New Stat Model
+S = 2651.19
+B = 493905
+Doing New Stat Model
+S = 2651.19
+B = 493905
+Doing New Stat Model
+S = 2651.19
+B = 493905
+Doing New Stat Model
+S = 2651.19
+B = 493905
+Doing New Stat Model
+S = 2651.19
+B = 493905
+Doing New Stat Model
+S = 2651.19
+B = 493905
+Doing New Stat Model
+S = 2651.19
+B = 493905
+Doing New Stat Model
+S = 2651.19
+B = 493905
+Doing New Stat Model
+S = 2651.19
+B = 493905
+Doing New Stat Model
+S = 2651.19
+B = 493905
+Doing New Stat Model
+S = 2651.19
+B = 493902
+Doing New Stat Model
+S = 2651.19
+B = 493892
+Doing New Stat Model
+S = 2651.19
+B = 493873
+Doing New Stat Model
+S = 2651.19
+B = 493818
+Doing New Stat Model
+S = 2651.19
+B = 493687
+Doing New Stat Model
+S = 2651.19
+B = 493415
+Doing New Stat Model
+S = 2651.19
+B = 492990
+Doing New Stat Model
+S = 2651.19
+B = 492186
+Doing New Stat Model
+S = 2651.19
+B = 490807
+Doing New Stat Model
+S = 2651.19
+B = 487994
+Doing New Stat Model
+S = 2651.19
+B = 483623
+Doing New Stat Model
+S = 2651.19
+B = 476846
+Doing New Stat Model
+S = 2651.19
+B = 467332
+Doing New Stat Model
+S = 2651.19
+B = 454075
+Doing New Stat Model
+S = 2651.19
+B = 434574
+Doing New Stat Model
+S = 2651.19
+B = 409137
+Doing New Stat Model
+S = 2651.19
+B = 375457
+Doing New Stat Model
+S = 2539.75
+B = 334216
+Doing New Stat Model
+S = 2539.72
+B = 286648
+Doing New Stat Model
+S = 2539.72
+B = 237004
+Doing New Stat Model
+S = 2538.82
+B = 191804
+Doing New Stat Model
+S = 2534.81
+B = 152284
+Doing New Stat Model
+S = 2532.39
+B = 118262
+Doing New Stat Model
+S = 2531.22
+B = 90111.6
+Doing New Stat Model
+S = 2529.45
+B = 66319.7
+Doing New Stat Model
+S = 2268.64
+B = 47567.8
+Doing New Stat Model
+S = 2193.44
+B = 33129.4
+Doing New Stat Model
+S = 2160.18
+B = 22678.3
+Doing New Stat Model
+S = 2159.68
+B = 15404.7
+Doing New Stat Model
+S = 2159.38
+B = 10671.9
+Doing New Stat Model
+S = 2142.24
+B = 7375.96
+Doing New Stat Model
+S = 2131.05
+B = 5327.97
+Doing New Stat Model
+S = 2101.24
+B = 3955.18
+Doing New Stat Model
+S = 2053.08
+B = 2870.39
+Doing New Stat Model
+S = 1439.1
+B = 2070.39
+Doing New Stat Model
+S = 1243.38
+B = 1593.59
+Doing New Stat Model
+S = 1242.94
+B = 1196.79
+Doing New Stat Model
+S = 1241.96
+B = 883.196
+Doing New Stat Model
+S = 1236.93
+B = 639.997
+Doing New Stat Model
+S = 1236.59
+B = 457.598
+Doing New Stat Model
+S = 1092.01
+B = 323.198
+Doing New Stat Model
+S = 988.526
+B = 259.199
+Doing New Stat Model
+S = 974.464
+B = 188.799
+Doing New Stat Model
+S = 974.173
+B = 140.799
+Doing New Stat Model
+S = 972.634
+B = 102.4
+Doing New Stat Model
+S = 971.435
+B = 79.9996
+Doing New Stat Model
+S = 971.396
+B = 60.7997
+Doing New Stat Model
+S = 971.357
+B = 22.3999
+Doing New Stat Model
+S = 744.026
+B = 15.9999
+Doing New Stat Model
+S = 0.605251
+B = 12.7999
+Doing New Stat Model
+S = 0.554637
+B = 3.19998
+Doing New Stat Model
+S = 0.0495635
+B = 3.19998
+Doing New Stat Model
+S = 0.00441188
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+
+  ==========================================================
+ |                         Opt Result                       |
+  ----------------------------------------------------------
+ | pT              | 3.0 - 5.0 GeV/c                        |
+  ----------------------------------------------------------
+ | RAA             | 1                                      |
+  ----------------------------------------------------------
+ | Sig reg         | +- 0.08   | Sideband bkg  | 308691     |
+  ----------------------------------------------------------
+ | weight S        | 2651      | weight B      | 493905     |
+  ----------------------------------------------------------
+ | S               | 971       | B             | 22         |
+  ----------------------------------------------------------
+ | effS            | 0.366385  | sig           | 31.31      |
+  ----------------------------------------------------------
+ | BDT                                 | -0.03              |
+  ==========================================================
+
+ptmin Now =  5      ptmax Now =   7
+ptmin = 5   ptmax = 7
+pass  -1 
+
+  ====================================================
+ |                Cut Opt Configuration               |
+  ----------------------------------------------------
+ | Method     | BDT::BDT                              |
+pass  0 
+  ----------------------------------------------------
+ | Variable0  | Btrk1Pt                               |
+  ----------------------------------------------------
+ | Variable1  | abs(Btrk1Dz1/Btrk1DzError1)           |
+  ----------------------------------------------------
+ | Variable2  | abs(Btrk1Dxy1/Btrk1DxyError1)         |
+  ----------------------------------------------------
+ | Variable3  | BsvpvDistance/BsvpvDisErr             |
+  ----------------------------------------------------
+ | Variable4  | Balpha                                |
+  ----------------------------------------------------
+ | Variable5  | Bchi2cl                               |
+  ====================================================
+
+PASS = 0.04
+PASS = 0.05
+PASS = 0.06
+PASS = 0.07
+PASS = 0.08
+PASS = 0.1866763547
+PASS =  0.2866763547
+PASS =  0.3866763547
+weightfunctionreco = pthat*weight
+pass  1 
+pass  1.1 
+Pass 1.2
+Pass 1.5
+BDTG Branch = BDT_pt_5_7
+SIGHIS = 0.00690146
+BKGDHIS = 199974
+Cut == (Btrk1Pt > 0.2 && Bchi2cl > 0.05 && BsvpvDistance/BsvpvDisErr > 2.0 && Bpt > 2 && abs(Btrk1Eta-0.0) < 2.4  && (TMath::Abs(By)<2.4&&TMath::Abs(Bmumumass-3.096916)<0.15&&((abs(Bmu1eta)<1.2&&Bmu1pt>3.5)||(abs(Bmu1eta)>1.2&&abs(Bmu1eta)<2.1&&Bmu1pt>(5.47-1.89*abs(Bmu1eta)))||(abs(Bmu1eta)>2.1&&abs(Bmu1eta)<2.4&&Bmu1pt>1.5))&&((abs(Bmu2eta)<1.2&&Bmu2pt>3.5)||(abs(Bmu2eta)>1.2&&abs(Bmu2eta)<2.1&&Bmu2pt>(5.47-1.89*abs(Bmu2eta)))||(abs(Bmu2eta)>2.1&&abs(Bmu2eta)<2.4&&Bmu2pt>1.5))&&Bmu1TMOneStationTight&&Bmu2TMOneStationTight&&Bmu1InPixelLayer>0&&(Bmu1InPixelLayer+Bmu1InStripLayer)>5&&Bmu2InPixelLayer>0&&(Bmu2InPixelLayer+Bmu2InStripLayer)>5&&Bmu1dxyPV<0.3&&Bmu2dxyPV<0.3&&Bmu1dzPV<20&&Bmu2dzPV<20&&Bmu1isTrackerMuon&&Bmu2isTrackerMuon&&Bmu1isGlobalMuon&&Bmu2isGlobalMuon&&Btrk1highPurity&&abs(Btrk1Eta)<2.4&&Btrk1Pt>0.2)  && (Btrk1PixelHit + Btrk1StripHit > 10) &&  (Btrk1PtErr/Btrk1Pt < 0.1)&& Btrk1Chi2ndf/(Btrk1nStripLayer+Btrk1nPixelLayer) < 0.18   && (abs(PVz)<15)&& ((Bmass - 5.27929 ) > 0.25 &&  (Bmass - 5.27929) < 0.30))&&Bpt>5.000000&&Bpt<7.000000
+pass  2 
+pass  3 
+pass  4 
+pass  5 
+pass  6 
+cutb = (Btrk1Pt > 0.2 && Bchi2cl > 0.05 && BsvpvDistance/BsvpvDisErr > 2.0 && Bpt > 2 && abs(Btrk1Eta-0.0) < 2.4  && (TMath::Abs(By)<2.4&&TMath::Abs(Bmumumass-3.096916)<0.15&&((abs(Bmu1eta)<1.2&&Bmu1pt>3.5)||(abs(Bmu1eta)>1.2&&abs(Bmu1eta)<2.1&&Bmu1pt>(5.47-1.89*abs(Bmu1eta)))||(abs(Bmu1eta)>2.1&&abs(Bmu1eta)<2.4&&Bmu1pt>1.5))&&((abs(Bmu2eta)<1.2&&Bmu2pt>3.5)||(abs(Bmu2eta)>1.2&&abs(Bmu2eta)<2.1&&Bmu2pt>(5.47-1.89*abs(Bmu2eta)))||(abs(Bmu2eta)>2.1&&abs(Bmu2eta)<2.4&&Bmu2pt>1.5))&&Bmu1TMOneStationTight&&Bmu2TMOneStationTight&&Bmu1InPixelLayer>0&&(Bmu1InPixelLayer+Bmu1InStripLayer)>5&&Bmu2InPixelLayer>0&&(Bmu2InPixelLayer+Bmu2InStripLayer)>5&&Bmu1dxyPV<0.3&&Bmu2dxyPV<0.3&&Bmu1dzPV<20&&Bmu2dzPV<20&&Bmu1isTrackerMuon&&Bmu2isTrackerMuon&&Bmu1isGlobalMuon&&Bmu2isGlobalMuon&&Btrk1highPurity&&abs(Btrk1Eta)<2.4&&Btrk1Pt>0.2)  && (Btrk1PixelHit + Btrk1StripHit > 10) &&  (Btrk1PtErr/Btrk1Pt < 0.1)&& Btrk1Chi2ndf/(Btrk1nStripLayer+Btrk1nPixelLayer) < 0.18   && (abs(PVz)<15)&& ((Bmass - 5.27929 ) > 0.25 &&  (Bmass - 5.27929) < 0.30))&&Bpt>5.000000&&Bpt<7.000000
+nB Before Bro: = 319957
+nB After Bro: = 639914
+weightfunctiongen = pthat*weight
+FONLL = fonlls/fo_pp_Bplus_5p03TeV_y2p4.dat
+ptmin = 5  ptmax = 7
+pass  7 
+nbin = 9
+Gen Cut = pthat*weight*((abs(Gy)<2.4&&abs(GpdgId)==521&&GisSignal==1)&&Gpt>5.000000&&Gpt<7.000000)
+Total Signal = 0.00690146
+Total Generated = 0.516543
+Inside Fucked:   ptmin = 7  ptmax = 7
+norm = 0.401
+htheoryreco->Integral() = 1.53622e+06
+nS = 5623.53
+nB = 639914
+
+Looking for max significance ...
+pass  8 
+Doing New Stat Model
+S = 5623.53
+B = 639914
+Doing New Stat Model
+S = 5623.53
+B = 639914
+Doing New Stat Model
+S = 5623.53
+B = 639914
+Doing New Stat Model
+S = 5623.53
+B = 639914
+Doing New Stat Model
+S = 5623.53
+B = 639914
+Doing New Stat Model
+S = 5623.53
+B = 639914
+Doing New Stat Model
+S = 5623.53
+B = 639914
+Doing New Stat Model
+S = 5623.53
+B = 639914
+Doing New Stat Model
+S = 5623.53
+B = 639914
+Doing New Stat Model
+S = 5623.53
+B = 639914
+Doing New Stat Model
+S = 5623.53
+B = 639914
+Doing New Stat Model
+S = 5623.53
+B = 639914
+Doing New Stat Model
+S = 5623.53
+B = 639914
+Doing New Stat Model
+S = 5623.53
+B = 639914
+Doing New Stat Model
+S = 5623.53
+B = 639914
+Doing New Stat Model
+S = 5623.53
+B = 639914
+Doing New Stat Model
+S = 5623.53
+B = 639914
+Doing New Stat Model
+S = 5623.53
+B = 639914
+Doing New Stat Model
+S = 5623.53
+B = 639914
+Doing New Stat Model
+S = 5623.53
+B = 639914
+Doing New Stat Model
+S = 5623.53
+B = 639914
+Doing New Stat Model
+S = 5623.53
+B = 639914
+Doing New Stat Model
+S = 5623.53
+B = 639914
+Doing New Stat Model
+S = 5623.53
+B = 639914
+Doing New Stat Model
+S = 5623.53
+B = 639914
+Doing New Stat Model
+S = 5623.53
+B = 639914
+Doing New Stat Model
+S = 5623.53
+B = 639914
+Doing New Stat Model
+S = 5623.53
+B = 639914
+Doing New Stat Model
+S = 5623.53
+B = 639914
+Doing New Stat Model
+S = 5623.53
+B = 639914
+Doing New Stat Model
+S = 5623.53
+B = 639914
+Doing New Stat Model
+S = 5623.53
+B = 639914
+Doing New Stat Model
+S = 5623.53
+B = 639914
+Doing New Stat Model
+S = 5623.53
+B = 639914
+Doing New Stat Model
+S = 5623.53
+B = 639914
+Doing New Stat Model
+S = 5623.53
+B = 639914
+Doing New Stat Model
+S = 5623.53
+B = 639914
+Doing New Stat Model
+S = 5623.53
+B = 639914
+Doing New Stat Model
+S = 5623.53
+B = 639914
+Doing New Stat Model
+S = 5623.53
+B = 639914
+Doing New Stat Model
+S = 5623.53
+B = 639914
+Doing New Stat Model
+S = 5623.53
+B = 639914
+Doing New Stat Model
+S = 5623.53
+B = 639914
+Doing New Stat Model
+S = 5623.53
+B = 639914
+Doing New Stat Model
+S = 5623.53
+B = 639914
+Doing New Stat Model
+S = 5623.53
+B = 639914
+Doing New Stat Model
+S = 5623.53
+B = 639914
+Doing New Stat Model
+S = 5623.53
+B = 639914
+Doing New Stat Model
+S = 5623.53
+B = 639914
+Doing New Stat Model
+S = 5623.53
+B = 639914
+Doing New Stat Model
+S = 5623.53
+B = 639914
+Doing New Stat Model
+S = 5623.53
+B = 639914
+Doing New Stat Model
+S = 5623.53
+B = 639914
+Doing New Stat Model
+S = 5623.53
+B = 639914
+Doing New Stat Model
+S = 5623.53
+B = 639914
+Doing New Stat Model
+S = 5623.53
+B = 639914
+Doing New Stat Model
+S = 5623.53
+B = 639914
+Doing New Stat Model
+S = 5623.53
+B = 639914
+Doing New Stat Model
+S = 5623.53
+B = 639914
+Doing New Stat Model
+S = 5623.53
+B = 639914
+Doing New Stat Model
+S = 5623.53
+B = 639914
+Doing New Stat Model
+S = 5623.53
+B = 639914
+Doing New Stat Model
+S = 5623.53
+B = 639914
+Doing New Stat Model
+S = 5623.53
+B = 639914
+Doing New Stat Model
+S = 5623.53
+B = 639904
+Doing New Stat Model
+S = 5623.53
+B = 639872
+Doing New Stat Model
+S = 5623.53
+B = 639837
+Doing New Stat Model
+S = 5623.53
+B = 639773
+Doing New Stat Model
+S = 5623.53
+B = 639587
+Doing New Stat Model
+S = 5623.53
+B = 639293
+Doing New Stat Model
+S = 5623.53
+B = 638739
+Doing New Stat Model
+S = 5623.53
+B = 637533
+Doing New Stat Model
+S = 5623.53
+B = 635191
+Doing New Stat Model
+S = 5623.53
+B = 630547
+Doing New Stat Model
+S = 5623.41
+B = 621514
+Doing New Stat Model
+S = 5623.41
+B = 602932
+Doing New Stat Model
+S = 5623.4
+B = 567204
+Doing New Stat Model
+S = 5623.4
+B = 509044
+Doing New Stat Model
+S = 5623.39
+B = 434769
+Doing New Stat Model
+S = 5616.44
+B = 362923
+Doing New Stat Model
+S = 5616.12
+B = 302859
+Doing New Stat Model
+S = 5608.56
+B = 254031
+Doing New Stat Model
+S = 5595.7
+B = 211314
+Doing New Stat Model
+S = 5506.36
+B = 170313
+Doing New Stat Model
+S = 5473.11
+B = 131487
+Doing New Stat Model
+S = 5404.79
+B = 97269.9
+Doing New Stat Model
+S = 5302.59
+B = 69484.5
+Doing New Stat Model
+S = 5157.44
+B = 48796.6
+Doing New Stat Model
+S = 4784.55
+B = 34265.4
+Doing New Stat Model
+S = 4207
+B = 23977.5
+Doing New Stat Model
+S = 3864.32
+B = 17164.7
+Doing New Stat Model
+S = 3774.4
+B = 12547.1
+Doing New Stat Model
+S = 3694.53
+B = 9199.96
+Doing New Stat Model
+S = 3435.42
+B = 6963.17
+Doing New Stat Model
+S = 3413.57
+B = 5452.77
+Doing New Stat Model
+S = 3334.24
+B = 4230.38
+Doing New Stat Model
+S = 2433.04
+B = 3382.38
+Doing New Stat Model
+S = 2251.79
+B = 2643.19
+Doing New Stat Model
+S = 2171.57
+B = 2009.59
+Doing New Stat Model
+S = 2134.01
+B = 1513.59
+Doing New Stat Model
+S = 1895.29
+B = 1139.19
+Doing New Stat Model
+S = 1764.43
+B = 825.596
+Doing New Stat Model
+S = 1287.9
+B = 604.797
+Doing New Stat Model
+S = 1181.07
+B = 415.998
+Doing New Stat Model
+S = 1159.27
+B = 291.199
+Doing New Stat Model
+S = 296.857
+B = 172.799
+Doing New Stat Model
+S = 271.86
+B = 105.599
+Doing New Stat Model
+S = 235.036
+B = 67.1997
+Doing New Stat Model
+S = 100.034
+B = 22.3999
+Doing New Stat Model
+S = 7.91796
+B = 12.7999
+Doing New Stat Model
+S = 0.946069
+B = 9.59995
+Doing New Stat Model
+S = 0.677462
+B = 0
+Doing New Stat Model
+S = 0.00842269
+B = 0
+Doing New Stat Model
+S = 0.00252476
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+
+  ==========================================================
+ |                         Opt Result                       |
+  ----------------------------------------------------------
+ | pT              | 5.0 - 7.0 GeV/c                        |
+  ----------------------------------------------------------
+ | RAA             | 1                                      |
+  ----------------------------------------------------------
+ | Sig reg         | +- 0.08   | Sideband bkg  | 399946     |
+  ----------------------------------------------------------
+ | weight S        | 5624      | weight B      | 639914     |
+  ----------------------------------------------------------
+ | S               | 3334      | B             | 4230       |
+  ----------------------------------------------------------
+ | effS            | 0.592909  | sig           | 38.56      |
+  ----------------------------------------------------------
+ | BDT                                 | -0.05              |
+  ==========================================================
+
+ptmin Now =  7      ptmax Now =   10
+ptmin = 7   ptmax = 10
+pass  -1 
+
+  ====================================================
+ |                Cut Opt Configuration               |
+  ----------------------------------------------------
+ | Method     | BDT::BDT                              |
+pass  0 
+  ----------------------------------------------------
+ | Variable0  | Btrk1Pt                               |
+  ----------------------------------------------------
+ | Variable1  | abs(Btrk1Dz1/Btrk1DzError1)           |
+  ----------------------------------------------------
+ | Variable2  | abs(Btrk1Dxy1/Btrk1DxyError1)         |
+  ----------------------------------------------------
+ | Variable3  | BsvpvDistance/BsvpvDisErr             |
+  ----------------------------------------------------
+ | Variable4  | Balpha                                |
+  ----------------------------------------------------
+ | Variable5  | Bchi2cl                               |
+  ====================================================
+
+PASS = 0.04
+PASS = 0.05
+PASS = 0.06
+PASS = 0.07
+PASS = 0.08
+PASS = 0.1866763547
+PASS =  0.2866763547
+PASS =  0.3866763547
+weightfunctionreco = pthat*weight
+pass  1 
+pass  1.1 
+Pass 1.2
+Pass 1.5
+BDTG Branch = BDT_pt_7_10
+SIGHIS = 0.026888
+BKGDHIS = 268600
+Cut == (Btrk1Pt > 0.2 && Bchi2cl > 0.05 && BsvpvDistance/BsvpvDisErr > 2.0 && Bpt > 2 && abs(Btrk1Eta-0.0) < 2.4  && (TMath::Abs(By)<2.4&&TMath::Abs(Bmumumass-3.096916)<0.15&&((abs(Bmu1eta)<1.2&&Bmu1pt>3.5)||(abs(Bmu1eta)>1.2&&abs(Bmu1eta)<2.1&&Bmu1pt>(5.47-1.89*abs(Bmu1eta)))||(abs(Bmu1eta)>2.1&&abs(Bmu1eta)<2.4&&Bmu1pt>1.5))&&((abs(Bmu2eta)<1.2&&Bmu2pt>3.5)||(abs(Bmu2eta)>1.2&&abs(Bmu2eta)<2.1&&Bmu2pt>(5.47-1.89*abs(Bmu2eta)))||(abs(Bmu2eta)>2.1&&abs(Bmu2eta)<2.4&&Bmu2pt>1.5))&&Bmu1TMOneStationTight&&Bmu2TMOneStationTight&&Bmu1InPixelLayer>0&&(Bmu1InPixelLayer+Bmu1InStripLayer)>5&&Bmu2InPixelLayer>0&&(Bmu2InPixelLayer+Bmu2InStripLayer)>5&&Bmu1dxyPV<0.3&&Bmu2dxyPV<0.3&&Bmu1dzPV<20&&Bmu2dzPV<20&&Bmu1isTrackerMuon&&Bmu2isTrackerMuon&&Bmu1isGlobalMuon&&Bmu2isGlobalMuon&&Btrk1highPurity&&abs(Btrk1Eta)<2.4&&Btrk1Pt>0.2)  && (Btrk1PixelHit + Btrk1StripHit > 10) &&  (Btrk1PtErr/Btrk1Pt < 0.1)&& Btrk1Chi2ndf/(Btrk1nStripLayer+Btrk1nPixelLayer) < 0.18   && (abs(PVz)<15)&& ((Bmass - 5.27929 ) > 0.25 &&  (Bmass - 5.27929) < 0.30))&&Bpt>7.000000&&Bpt<10.000000
+pass  2 
+pass  3 
+pass  4 
+pass  5 
+pass  6 
+cutb = (Btrk1Pt > 0.2 && Bchi2cl > 0.05 && BsvpvDistance/BsvpvDisErr > 2.0 && Bpt > 2 && abs(Btrk1Eta-0.0) < 2.4  && (TMath::Abs(By)<2.4&&TMath::Abs(Bmumumass-3.096916)<0.15&&((abs(Bmu1eta)<1.2&&Bmu1pt>3.5)||(abs(Bmu1eta)>1.2&&abs(Bmu1eta)<2.1&&Bmu1pt>(5.47-1.89*abs(Bmu1eta)))||(abs(Bmu1eta)>2.1&&abs(Bmu1eta)<2.4&&Bmu1pt>1.5))&&((abs(Bmu2eta)<1.2&&Bmu2pt>3.5)||(abs(Bmu2eta)>1.2&&abs(Bmu2eta)<2.1&&Bmu2pt>(5.47-1.89*abs(Bmu2eta)))||(abs(Bmu2eta)>2.1&&abs(Bmu2eta)<2.4&&Bmu2pt>1.5))&&Bmu1TMOneStationTight&&Bmu2TMOneStationTight&&Bmu1InPixelLayer>0&&(Bmu1InPixelLayer+Bmu1InStripLayer)>5&&Bmu2InPixelLayer>0&&(Bmu2InPixelLayer+Bmu2InStripLayer)>5&&Bmu1dxyPV<0.3&&Bmu2dxyPV<0.3&&Bmu1dzPV<20&&Bmu2dzPV<20&&Bmu1isTrackerMuon&&Bmu2isTrackerMuon&&Bmu1isGlobalMuon&&Bmu2isGlobalMuon&&Btrk1highPurity&&abs(Btrk1Eta)<2.4&&Btrk1Pt>0.2)  && (Btrk1PixelHit + Btrk1StripHit > 10) &&  (Btrk1PtErr/Btrk1Pt < 0.1)&& Btrk1Chi2ndf/(Btrk1nStripLayer+Btrk1nPixelLayer) < 0.18   && (abs(PVz)<15)&& ((Bmass - 5.27929 ) > 0.25 &&  (Bmass - 5.27929) < 0.30))&&Bpt>7.000000&&Bpt<10.000000
+nB Before Bro: = 429758
+nB After Bro: = 859516
+weightfunctiongen = pthat*weight
+FONLL = fonlls/fo_pp_Bplus_5p03TeV_y2p4.dat
+ptmin = 7  ptmax = 10
+pass  7 
+nbin = 13
+Gen Cut = pthat*weight*((abs(Gy)<2.4&&abs(GpdgId)==521&&GisSignal==1)&&Gpt>7.000000&&Gpt<10.000000)
+Total Signal = 0.026888
+Total Generated = 0.55972
+Inside Fucked:   ptmin = 10  ptmax = 10
+norm = 0.401
+htheoryreco->Integral() = 3.71314e+06
+nS = 13592.4
+nB = 859516
+
+Looking for max significance ...
+pass  8 
+Doing New Stat Model
+S = 13592.4
+B = 859516
+Doing New Stat Model
+S = 13592.4
+B = 859516
+Doing New Stat Model
+S = 13592.4
+B = 859516
+Doing New Stat Model
+S = 13592.4
+B = 859516
+Doing New Stat Model
+S = 13592.4
+B = 859516
+Doing New Stat Model
+S = 13592.4
+B = 859516
+Doing New Stat Model
+S = 13592.4
+B = 859516
+Doing New Stat Model
+S = 13592.4
+B = 859516
+Doing New Stat Model
+S = 13592.4
+B = 859516
+Doing New Stat Model
+S = 13592.4
+B = 859516
+Doing New Stat Model
+S = 13592.4
+B = 859516
+Doing New Stat Model
+S = 13592.4
+B = 859516
+Doing New Stat Model
+S = 13592.4
+B = 859516
+Doing New Stat Model
+S = 13592.4
+B = 859516
+Doing New Stat Model
+S = 13592.4
+B = 859516
+Doing New Stat Model
+S = 13592.4
+B = 859516
+Doing New Stat Model
+S = 13592.4
+B = 859516
+Doing New Stat Model
+S = 13592.4
+B = 859516
+Doing New Stat Model
+S = 13592.4
+B = 859516
+Doing New Stat Model
+S = 13592.4
+B = 859516
+Doing New Stat Model
+S = 13592.4
+B = 859516
+Doing New Stat Model
+S = 13592.4
+B = 859516
+Doing New Stat Model
+S = 13592.4
+B = 859516
+Doing New Stat Model
+S = 13592.4
+B = 859516
+Doing New Stat Model
+S = 13592.4
+B = 859516
+Doing New Stat Model
+S = 13592.4
+B = 859516
+Doing New Stat Model
+S = 13592.4
+B = 859516
+Doing New Stat Model
+S = 13592.4
+B = 859516
+Doing New Stat Model
+S = 13592.4
+B = 859516
+Doing New Stat Model
+S = 13592.4
+B = 859516
+Doing New Stat Model
+S = 13592.4
+B = 859516
+Doing New Stat Model
+S = 13592.4
+B = 859516
+Doing New Stat Model
+S = 13592.4
+B = 859516
+Doing New Stat Model
+S = 13592.4
+B = 859516
+Doing New Stat Model
+S = 13592.4
+B = 859516
+Doing New Stat Model
+S = 13592.4
+B = 859516
+Doing New Stat Model
+S = 13592.4
+B = 859516
+Doing New Stat Model
+S = 13592.4
+B = 859516
+Doing New Stat Model
+S = 13592.4
+B = 859516
+Doing New Stat Model
+S = 13592.4
+B = 859516
+Doing New Stat Model
+S = 13592.4
+B = 859516
+Doing New Stat Model
+S = 13592.4
+B = 859516
+Doing New Stat Model
+S = 13592.4
+B = 859516
+Doing New Stat Model
+S = 13592.4
+B = 859516
+Doing New Stat Model
+S = 13592.4
+B = 859516
+Doing New Stat Model
+S = 13592.4
+B = 859516
+Doing New Stat Model
+S = 13592.4
+B = 859516
+Doing New Stat Model
+S = 13592.4
+B = 859516
+Doing New Stat Model
+S = 13592.4
+B = 859516
+Doing New Stat Model
+S = 13592.4
+B = 859516
+Doing New Stat Model
+S = 13592.4
+B = 859516
+Doing New Stat Model
+S = 13592.4
+B = 859516
+Doing New Stat Model
+S = 13592.4
+B = 859516
+Doing New Stat Model
+S = 13592.4
+B = 859516
+Doing New Stat Model
+S = 13592.4
+B = 859516
+Doing New Stat Model
+S = 13592.4
+B = 859516
+Doing New Stat Model
+S = 13592.4
+B = 859516
+Doing New Stat Model
+S = 13592.4
+B = 859516
+Doing New Stat Model
+S = 13592.4
+B = 859516
+Doing New Stat Model
+S = 13592.4
+B = 859516
+Doing New Stat Model
+S = 13592.4
+B = 859516
+Doing New Stat Model
+S = 13592.4
+B = 859516
+Doing New Stat Model
+S = 13592.4
+B = 859516
+Doing New Stat Model
+S = 13592.4
+B = 859516
+Doing New Stat Model
+S = 13592.4
+B = 859516
+Doing New Stat Model
+S = 13592.4
+B = 859510
+Doing New Stat Model
+S = 13592.4
+B = 859487
+Doing New Stat Model
+S = 13592.4
+B = 859426
+Doing New Stat Model
+S = 13592.4
+B = 859190
+Doing New Stat Model
+S = 13592.4
+B = 858767
+Doing New Stat Model
+S = 13592.4
+B = 857839
+Doing New Stat Model
+S = 13592.4
+B = 855958
+Doing New Stat Model
+S = 13592.4
+B = 852543
+Doing New Stat Model
+S = 13592.4
+B = 845954
+Doing New Stat Model
+S = 13592.4
+B = 834393
+Doing New Stat Model
+S = 13592.4
+B = 816758
+Doing New Stat Model
+S = 13592.4
+B = 791129
+Doing New Stat Model
+S = 13592.4
+B = 756662
+Doing New Stat Model
+S = 13592.4
+B = 707782
+Doing New Stat Model
+S = 13592.4
+B = 644358
+Doing New Stat Model
+S = 13592.4
+B = 568714
+Doing New Stat Model
+S = 13578.6
+B = 493226
+Doing New Stat Model
+S = 13577.9
+B = 429534
+Doing New Stat Model
+S = 13577.9
+B = 375950
+Doing New Stat Model
+S = 13560.2
+B = 330971
+Doing New Stat Model
+S = 13553.6
+B = 289029
+Doing New Stat Model
+S = 13491.8
+B = 248364
+Doing New Stat Model
+S = 13413.4
+B = 208044
+Doing New Stat Model
+S = 13261.7
+B = 170012
+Doing New Stat Model
+S = 13242.9
+B = 135343
+Doing New Stat Model
+S = 13201
+B = 104931
+Doing New Stat Model
+S = 13148.3
+B = 79967.6
+Doing New Stat Model
+S = 13023.8
+B = 60444.5
+Doing New Stat Model
+S = 12787.2
+B = 45775.8
+Doing New Stat Model
+S = 12637
+B = 34806.2
+Doing New Stat Model
+S = 12421.3
+B = 26463.9
+Doing New Stat Model
+S = 12233.7
+B = 20582.3
+Doing New Stat Model
+S = 11702.4
+B = 15823.9
+Doing New Stat Model
+S = 11205
+B = 12150.3
+Doing New Stat Model
+S = 11041.7
+B = 9103.96
+Doing New Stat Model
+S = 10853.4
+B = 6783.97
+Doing New Stat Model
+S = 10437.6
+B = 5107.18
+Doing New Stat Model
+S = 9705.87
+B = 3961.58
+Doing New Stat Model
+S = 8751.81
+B = 3196.78
+Doing New Stat Model
+S = 8386.1
+B = 2614.39
+Doing New Stat Model
+S = 8088.55
+B = 2140.79
+Doing New Stat Model
+S = 7864.44
+B = 1699.19
+Doing New Stat Model
+S = 7152.36
+B = 1363.19
+Doing New Stat Model
+S = 6635.66
+B = 1030.4
+Doing New Stat Model
+S = 5619.23
+B = 739.196
+Doing New Stat Model
+S = 4607.55
+B = 511.998
+Doing New Stat Model
+S = 3557.37
+B = 319.998
+Doing New Stat Model
+S = 2757.09
+B = 201.599
+Doing New Stat Model
+S = 1796.44
+B = 108.799
+Doing New Stat Model
+S = 1014.71
+B = 60.7997
+Doing New Stat Model
+S = 777.393
+B = 38.3998
+Doing New Stat Model
+S = 258.711
+B = 12.7999
+Doing New Stat Model
+S = 22.7842
+B = 0
+Doing New Stat Model
+S = 6.47076
+B = 0
+Doing New Stat Model
+S = 0.0403728
+B = 0
+Doing New Stat Model
+S = 0.0380781
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+
+  ==========================================================
+ |                         Opt Result                       |
+  ----------------------------------------------------------
+ | pT              | 7.0 - 10.0 GeV/c                       |
+  ----------------------------------------------------------
+ | RAA             | 1                                      |
+  ----------------------------------------------------------
+ | Sig reg         | +- 0.08   | Sideband bkg  | 537198     |
+  ----------------------------------------------------------
+ | weight S        | 13592     | weight B      | 859516     |
+  ----------------------------------------------------------
+ | S               | 10438     | B             | 5107       |
+  ----------------------------------------------------------
+ | effS            | 0.767896  | sig           | 84.05      |
+  ----------------------------------------------------------
+ | BDT                                 | 0.00999999         |
+  ==========================================================
+
+ptmin Now =  10      ptmax Now =   15
+ptmin = 10   ptmax = 15
+pass  -1 
+
+  ====================================================
+ |                Cut Opt Configuration               |
+  ----------------------------------------------------
+ | Method     | BDT::BDT                              |
+pass  0 
+  ----------------------------------------------------
+ | Variable0  | Btrk1Pt                               |
+  ----------------------------------------------------
+ | Variable1  | abs(Btrk1Dz1/Btrk1DzError1)           |
+  ----------------------------------------------------
+ | Variable2  | abs(Btrk1Dxy1/Btrk1DxyError1)         |
+  ----------------------------------------------------
+ | Variable3  | BsvpvDistance/BsvpvDisErr             |
+  ----------------------------------------------------
+ | Variable4  | Balpha                                |
+  ----------------------------------------------------
+ | Variable5  | Bchi2cl                               |
+  ====================================================
+
+PASS = 0.04
+PASS = 0.05
+PASS = 0.06
+PASS = 0.07
+PASS = 0.08
+PASS = 0.1866763547
+PASS =  0.2866763547
+PASS =  0.3866763547
+weightfunctionreco = pthat*weight
+pass  1 
+pass  1.1 
+Pass 1.2
+Pass 1.5
+BDTG Branch = BDT_pt_10_15
+SIGHIS = 0.0516082
+BKGDHIS = 131980
+Cut == (Btrk1Pt > 0.2 && Bchi2cl > 0.05 && BsvpvDistance/BsvpvDisErr > 2.0 && Bpt > 2 && abs(Btrk1Eta-0.0) < 2.4  && (TMath::Abs(By)<2.4&&TMath::Abs(Bmumumass-3.096916)<0.15&&((abs(Bmu1eta)<1.2&&Bmu1pt>3.5)||(abs(Bmu1eta)>1.2&&abs(Bmu1eta)<2.1&&Bmu1pt>(5.47-1.89*abs(Bmu1eta)))||(abs(Bmu1eta)>2.1&&abs(Bmu1eta)<2.4&&Bmu1pt>1.5))&&((abs(Bmu2eta)<1.2&&Bmu2pt>3.5)||(abs(Bmu2eta)>1.2&&abs(Bmu2eta)<2.1&&Bmu2pt>(5.47-1.89*abs(Bmu2eta)))||(abs(Bmu2eta)>2.1&&abs(Bmu2eta)<2.4&&Bmu2pt>1.5))&&Bmu1TMOneStationTight&&Bmu2TMOneStationTight&&Bmu1InPixelLayer>0&&(Bmu1InPixelLayer+Bmu1InStripLayer)>5&&Bmu2InPixelLayer>0&&(Bmu2InPixelLayer+Bmu2InStripLayer)>5&&Bmu1dxyPV<0.3&&Bmu2dxyPV<0.3&&Bmu1dzPV<20&&Bmu2dzPV<20&&Bmu1isTrackerMuon&&Bmu2isTrackerMuon&&Bmu1isGlobalMuon&&Bmu2isGlobalMuon&&Btrk1highPurity&&abs(Btrk1Eta)<2.4&&Btrk1Pt>0.2)  && (Btrk1PixelHit + Btrk1StripHit > 10) &&  (Btrk1PtErr/Btrk1Pt < 0.1)&& Btrk1Chi2ndf/(Btrk1nStripLayer+Btrk1nPixelLayer) < 0.18   && (abs(PVz)<15)&& ((Bmass - 5.27929 ) > 0.25 &&  (Bmass - 5.27929) < 0.30))&&Bpt>10.000000&&Bpt<15.000000
+pass  2 
+pass  3 
+pass  4 
+pass  5 
+pass  6 
+cutb = (Btrk1Pt > 0.2 && Bchi2cl > 0.05 && BsvpvDistance/BsvpvDisErr > 2.0 && Bpt > 2 && abs(Btrk1Eta-0.0) < 2.4  && (TMath::Abs(By)<2.4&&TMath::Abs(Bmumumass-3.096916)<0.15&&((abs(Bmu1eta)<1.2&&Bmu1pt>3.5)||(abs(Bmu1eta)>1.2&&abs(Bmu1eta)<2.1&&Bmu1pt>(5.47-1.89*abs(Bmu1eta)))||(abs(Bmu1eta)>2.1&&abs(Bmu1eta)<2.4&&Bmu1pt>1.5))&&((abs(Bmu2eta)<1.2&&Bmu2pt>3.5)||(abs(Bmu2eta)>1.2&&abs(Bmu2eta)<2.1&&Bmu2pt>(5.47-1.89*abs(Bmu2eta)))||(abs(Bmu2eta)>2.1&&abs(Bmu2eta)<2.4&&Bmu2pt>1.5))&&Bmu1TMOneStationTight&&Bmu2TMOneStationTight&&Bmu1InPixelLayer>0&&(Bmu1InPixelLayer+Bmu1InStripLayer)>5&&Bmu2InPixelLayer>0&&(Bmu2InPixelLayer+Bmu2InStripLayer)>5&&Bmu1dxyPV<0.3&&Bmu2dxyPV<0.3&&Bmu1dzPV<20&&Bmu2dzPV<20&&Bmu1isTrackerMuon&&Bmu2isTrackerMuon&&Bmu1isGlobalMuon&&Bmu2isGlobalMuon&&Btrk1highPurity&&abs(Btrk1Eta)<2.4&&Btrk1Pt>0.2)  && (Btrk1PixelHit + Btrk1StripHit > 10) &&  (Btrk1PtErr/Btrk1Pt < 0.1)&& Btrk1Chi2ndf/(Btrk1nStripLayer+Btrk1nPixelLayer) < 0.18   && (abs(PVz)<15)&& ((Bmass - 5.27929 ) > 0.25 &&  (Bmass - 5.27929) < 0.30))&&Bpt>10.000000&&Bpt<15.000000
+nB Before Bro: = 211167
+nB After Bro: = 422334
+weightfunctiongen = pthat*weight
+FONLL = fonlls/fo_pp_Bplus_5p03TeV_y2p4.dat
+ptmin = 10  ptmax = 15
+pass  7 
+nbin = 21
+Gen Cut = pthat*weight*((abs(Gy)<2.4&&abs(GpdgId)==521&&GisSignal==1)&&Gpt>10.000000&&Gpt<15.000000)
+Total Signal = 0.0516083
+Total Generated = 0.409905
+Inside Fucked:   ptmin = 15  ptmax = 15
+norm = 0.401
+htheoryreco->Integral() = 5.18502e+06
+nS = 18980.4
+nB = 422334
+
+Looking for max significance ...
+pass  8 
+Doing New Stat Model
+S = 18980.4
+B = 422334
+Doing New Stat Model
+S = 18980.4
+B = 422334
+Doing New Stat Model
+S = 18980.4
+B = 422334
+Doing New Stat Model
+S = 18980.4
+B = 422334
+Doing New Stat Model
+S = 18980.4
+B = 422334
+Doing New Stat Model
+S = 18980.4
+B = 422334
+Doing New Stat Model
+S = 18980.4
+B = 422334
+Doing New Stat Model
+S = 18980.4
+B = 422334
+Doing New Stat Model
+S = 18980.4
+B = 422334
+Doing New Stat Model
+S = 18980.4
+B = 422334
+Doing New Stat Model
+S = 18980.4
+B = 422334
+Doing New Stat Model
+S = 18980.4
+B = 422334
+Doing New Stat Model
+S = 18980.4
+B = 422334
+Doing New Stat Model
+S = 18980.4
+B = 422334
+Doing New Stat Model
+S = 18980.4
+B = 422334
+Doing New Stat Model
+S = 18980.4
+B = 422334
+Doing New Stat Model
+S = 18980.4
+B = 422334
+Doing New Stat Model
+S = 18980.4
+B = 422334
+Doing New Stat Model
+S = 18980.4
+B = 422334
+Doing New Stat Model
+S = 18980.4
+B = 422334
+Doing New Stat Model
+S = 18980.4
+B = 422334
+Doing New Stat Model
+S = 18980.4
+B = 422334
+Doing New Stat Model
+S = 18980.4
+B = 422334
+Doing New Stat Model
+S = 18980.4
+B = 422334
+Doing New Stat Model
+S = 18980.4
+B = 422334
+Doing New Stat Model
+S = 18980.4
+B = 422334
+Doing New Stat Model
+S = 18980.4
+B = 422334
+Doing New Stat Model
+S = 18980.4
+B = 422334
+Doing New Stat Model
+S = 18980.4
+B = 422334
+Doing New Stat Model
+S = 18980.4
+B = 422334
+Doing New Stat Model
+S = 18980.4
+B = 422334
+Doing New Stat Model
+S = 18980.4
+B = 422334
+Doing New Stat Model
+S = 18980.4
+B = 422334
+Doing New Stat Model
+S = 18980.4
+B = 422334
+Doing New Stat Model
+S = 18980.4
+B = 422334
+Doing New Stat Model
+S = 18980.4
+B = 422334
+Doing New Stat Model
+S = 18980.4
+B = 422334
+Doing New Stat Model
+S = 18980.4
+B = 422334
+Doing New Stat Model
+S = 18980.4
+B = 422334
+Doing New Stat Model
+S = 18980.4
+B = 422334
+Doing New Stat Model
+S = 18980.4
+B = 422334
+Doing New Stat Model
+S = 18980.4
+B = 422334
+Doing New Stat Model
+S = 18980.4
+B = 422334
+Doing New Stat Model
+S = 18980.4
+B = 422334
+Doing New Stat Model
+S = 18980.4
+B = 422334
+Doing New Stat Model
+S = 18980.4
+B = 422334
+Doing New Stat Model
+S = 18980.4
+B = 422334
+Doing New Stat Model
+S = 18980.4
+B = 422334
+Doing New Stat Model
+S = 18980.4
+B = 422334
+Doing New Stat Model
+S = 18980.4
+B = 422334
+Doing New Stat Model
+S = 18980.4
+B = 422334
+Doing New Stat Model
+S = 18980.4
+B = 422334
+Doing New Stat Model
+S = 18980.4
+B = 422334
+Doing New Stat Model
+S = 18980.4
+B = 422334
+Doing New Stat Model
+S = 18980.4
+B = 422334
+Doing New Stat Model
+S = 18980.4
+B = 422334
+Doing New Stat Model
+S = 18980.4
+B = 422334
+Doing New Stat Model
+S = 18980.4
+B = 422334
+Doing New Stat Model
+S = 18980.4
+B = 422334
+Doing New Stat Model
+S = 18980.4
+B = 422334
+Doing New Stat Model
+S = 18980.4
+B = 422334
+Doing New Stat Model
+S = 18980.4
+B = 422334
+Doing New Stat Model
+S = 18980.4
+B = 422334
+Doing New Stat Model
+S = 18980.4
+B = 422334
+Doing New Stat Model
+S = 18980.4
+B = 422334
+Doing New Stat Model
+S = 18980.4
+B = 422331
+Doing New Stat Model
+S = 18980.4
+B = 422315
+Doing New Stat Model
+S = 18980.4
+B = 422276
+Doing New Stat Model
+S = 18980.4
+B = 422174
+Doing New Stat Model
+S = 18980.4
+B = 421979
+Doing New Stat Model
+S = 18980.4
+B = 421684
+Doing New Stat Model
+S = 18980.4
+B = 421054
+Doing New Stat Model
+S = 18980.4
+B = 419611
+Doing New Stat Model
+S = 18980.4
+B = 416712
+Doing New Stat Model
+S = 18980.4
+B = 412081
+Doing New Stat Model
+S = 18980.4
+B = 405044
+Doing New Stat Model
+S = 18980.4
+B = 394373
+Doing New Stat Model
+S = 18980.4
+B = 379253
+Doing New Stat Model
+S = 18980.4
+B = 358024
+Doing New Stat Model
+S = 18974.5
+B = 332091
+Doing New Stat Model
+S = 18974
+B = 302898
+Doing New Stat Model
+S = 18974
+B = 272037
+Doing New Stat Model
+S = 18938.9
+B = 242053
+Doing New Stat Model
+S = 18938.8
+B = 214133
+Doing New Stat Model
+S = 18934.5
+B = 189250
+Doing New Stat Model
+S = 18892.5
+B = 167273
+Doing New Stat Model
+S = 18889
+B = 147474
+Doing New Stat Model
+S = 18877.7
+B = 128358
+Doing New Stat Model
+S = 18790
+B = 110876
+Doing New Stat Model
+S = 18759.9
+B = 94911.5
+Doing New Stat Model
+S = 18742.9
+B = 80585.2
+Doing New Stat Model
+S = 18617.7
+B = 67564.5
+Doing New Stat Model
+S = 18582.2
+B = 55532.5
+Doing New Stat Model
+S = 18414.4
+B = 45011
+Doing New Stat Model
+S = 18368.5
+B = 36316.6
+Doing New Stat Model
+S = 18259.1
+B = 29062.3
+Doing New Stat Model
+S = 18129.8
+B = 23225.5
+Doing New Stat Model
+S = 17950.2
+B = 18681.5
+Doing New Stat Model
+S = 17710.1
+B = 14895.9
+Doing New Stat Model
+S = 17523.7
+B = 11878.3
+Doing New Stat Model
+S = 17404.5
+B = 9423.96
+Doing New Stat Model
+S = 17151.5
+B = 7539.16
+Doing New Stat Model
+S = 16908
+B = 5926.37
+Doing New Stat Model
+S = 16564
+B = 4675.18
+Doing New Stat Model
+S = 16244.3
+B = 3651.18
+Doing New Stat Model
+S = 15976.9
+B = 2851.19
+Doing New Stat Model
+S = 15708.7
+B = 2086.39
+Doing New Stat Model
+S = 15276.4
+B = 1539.19
+Doing New Stat Model
+S = 14819.5
+B = 1129.59
+Doing New Stat Model
+S = 14115.7
+B = 803.196
+Doing New Stat Model
+S = 13453
+B = 585.597
+Doing New Stat Model
+S = 13073.2
+B = 419.198
+Doing New Stat Model
+S = 12567
+B = 313.599
+Doing New Stat Model
+S = 12013.3
+B = 230.399
+Doing New Stat Model
+S = 11385.6
+B = 182.399
+Doing New Stat Model
+S = 10660.7
+B = 124.799
+Doing New Stat Model
+S = 9490.62
+B = 83.1996
+Doing New Stat Model
+S = 8425.23
+B = 63.9997
+Doing New Stat Model
+S = 6902.27
+B = 44.7998
+Doing New Stat Model
+S = 5562.01
+B = 31.9998
+Doing New Stat Model
+S = 3993.23
+B = 15.9999
+Doing New Stat Model
+S = 2767.92
+B = 3.19999
+Doing New Stat Model
+S = 1849.68
+B = 0
+Doing New Stat Model
+S = 1180.59
+B = 0
+Doing New Stat Model
+S = 452.613
+B = 0
+Doing New Stat Model
+S = 150.8
+B = 0
+Doing New Stat Model
+S = 54.0397
+B = 0
+Doing New Stat Model
+S = 7.58125
+B = 0
+Doing New Stat Model
+S = 0.145642
+B = 0
+Doing New Stat Model
+S = 0.0650479
+B = 0
+Doing New Stat Model
+S = 0.000273719
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+
+  ==========================================================
+ |                         Opt Result                       |
+  ----------------------------------------------------------
+ | pT              | 10.0 - 15.0 GeV/c                      |
+  ----------------------------------------------------------
+ | RAA             | 1                                      |
+  ----------------------------------------------------------
+ | Sig reg         | +- 0.08   | Sideband bkg  | 131979     |
+  ----------------------------------------------------------
+ | weight S        | 18980     | weight B      | 422334     |
+  ----------------------------------------------------------
+ | S               | 15276     | B             | 1539       |
+  ----------------------------------------------------------
+ | effS            | 0.804848  | sig           | 118.26     |
+  ----------------------------------------------------------
+ | BDT                                 | 0.0699999          |
+  ==========================================================
+
+ptmin Now =  15      ptmax Now =   20
+ptmin = 15   ptmax = 20
+pass  -1 
+
+  ====================================================
+ |                Cut Opt Configuration               |
+  ----------------------------------------------------
+ | Method     | BDT::BDT                              |
+pass  0 
+  ----------------------------------------------------
+ | Variable0  | Btrk1Pt                               |
+  ----------------------------------------------------
+ | Variable1  | abs(Btrk1Dz1/Btrk1DzError1)           |
+  ----------------------------------------------------
+ | Variable2  | abs(Btrk1Dxy1/Btrk1DxyError1)         |
+  ----------------------------------------------------
+ | Variable3  | BsvpvDistance/BsvpvDisErr             |
+  ----------------------------------------------------
+ | Variable4  | Balpha                                |
+  ----------------------------------------------------
+ | Variable5  | Bchi2cl                               |
+  ====================================================
+
+PASS = 0.04
+PASS = 0.05
+PASS = 0.06
+PASS = 0.07
+PASS = 0.08
+PASS = 0.1866763547
+PASS =  0.2866763547
+PASS =  0.3866763547
+weightfunctionreco = pthat*weight
+pass  1 
+pass  1.1 
+Pass 1.2
+Pass 1.5
+BDTG Branch = BDT_pt_15_20
+SIGHIS = 0.0329005
+BKGDHIS = 18401
+Cut == (Btrk1Pt > 0.2 && Bchi2cl > 0.05 && BsvpvDistance/BsvpvDisErr > 2.0 && Bpt > 2 && abs(Btrk1Eta-0.0) < 2.4  && (TMath::Abs(By)<2.4&&TMath::Abs(Bmumumass-3.096916)<0.15&&((abs(Bmu1eta)<1.2&&Bmu1pt>3.5)||(abs(Bmu1eta)>1.2&&abs(Bmu1eta)<2.1&&Bmu1pt>(5.47-1.89*abs(Bmu1eta)))||(abs(Bmu1eta)>2.1&&abs(Bmu1eta)<2.4&&Bmu1pt>1.5))&&((abs(Bmu2eta)<1.2&&Bmu2pt>3.5)||(abs(Bmu2eta)>1.2&&abs(Bmu2eta)<2.1&&Bmu2pt>(5.47-1.89*abs(Bmu2eta)))||(abs(Bmu2eta)>2.1&&abs(Bmu2eta)<2.4&&Bmu2pt>1.5))&&Bmu1TMOneStationTight&&Bmu2TMOneStationTight&&Bmu1InPixelLayer>0&&(Bmu1InPixelLayer+Bmu1InStripLayer)>5&&Bmu2InPixelLayer>0&&(Bmu2InPixelLayer+Bmu2InStripLayer)>5&&Bmu1dxyPV<0.3&&Bmu2dxyPV<0.3&&Bmu1dzPV<20&&Bmu2dzPV<20&&Bmu1isTrackerMuon&&Bmu2isTrackerMuon&&Bmu1isGlobalMuon&&Bmu2isGlobalMuon&&Btrk1highPurity&&abs(Btrk1Eta)<2.4&&Btrk1Pt>0.2)  && (Btrk1PixelHit + Btrk1StripHit > 10) &&  (Btrk1PtErr/Btrk1Pt < 0.1)&& Btrk1Chi2ndf/(Btrk1nStripLayer+Btrk1nPixelLayer) < 0.18   && (abs(PVz)<15)&& ((Bmass - 5.27929 ) > 0.25 &&  (Bmass - 5.27929) < 0.30))&&Bpt>15.000000&&Bpt<20.000000
+pass  2 
+pass  3 
+pass  4 
+pass  5 
+pass  6 
+cutb = (Btrk1Pt > 0.2 && Bchi2cl > 0.05 && BsvpvDistance/BsvpvDisErr > 2.0 && Bpt > 2 && abs(Btrk1Eta-0.0) < 2.4  && (TMath::Abs(By)<2.4&&TMath::Abs(Bmumumass-3.096916)<0.15&&((abs(Bmu1eta)<1.2&&Bmu1pt>3.5)||(abs(Bmu1eta)>1.2&&abs(Bmu1eta)<2.1&&Bmu1pt>(5.47-1.89*abs(Bmu1eta)))||(abs(Bmu1eta)>2.1&&abs(Bmu1eta)<2.4&&Bmu1pt>1.5))&&((abs(Bmu2eta)<1.2&&Bmu2pt>3.5)||(abs(Bmu2eta)>1.2&&abs(Bmu2eta)<2.1&&Bmu2pt>(5.47-1.89*abs(Bmu2eta)))||(abs(Bmu2eta)>2.1&&abs(Bmu2eta)<2.4&&Bmu2pt>1.5))&&Bmu1TMOneStationTight&&Bmu2TMOneStationTight&&Bmu1InPixelLayer>0&&(Bmu1InPixelLayer+Bmu1InStripLayer)>5&&Bmu2InPixelLayer>0&&(Bmu2InPixelLayer+Bmu2InStripLayer)>5&&Bmu1dxyPV<0.3&&Bmu2dxyPV<0.3&&Bmu1dzPV<20&&Bmu2dzPV<20&&Bmu1isTrackerMuon&&Bmu2isTrackerMuon&&Bmu1isGlobalMuon&&Bmu2isGlobalMuon&&Btrk1highPurity&&abs(Btrk1Eta)<2.4&&Btrk1Pt>0.2)  && (Btrk1PixelHit + Btrk1StripHit > 10) &&  (Btrk1PtErr/Btrk1Pt < 0.1)&& Btrk1Chi2ndf/(Btrk1nStripLayer+Btrk1nPixelLayer) < 0.18   && (abs(PVz)<15)&& ((Bmass - 5.27929 ) > 0.25 &&  (Bmass - 5.27929) < 0.30))&&Bpt>15.000000&&Bpt<20.000000
+nB Before Bro: = 29441.5
+nB After Bro: = 58882.9
+weightfunctiongen = pthat*weight
+FONLL = fonlls/fo_pp_Bplus_5p03TeV_y2p4.dat
+ptmin = 15  ptmax = 20
+pass  7 
+nbin = 21
+Gen Cut = pthat*weight*((abs(Gy)<2.4&&abs(GpdgId)==521&&GisSignal==1)&&Gpt>15.000000&&Gpt<20.000000)
+Total Signal = 0.0329006
+Total Generated = 0.145283
+Inside Fucked:   ptmin = 20  ptmax = 20
+norm = 0.401
+htheoryreco->Integral() = 2.49435e+06
+nS = 9130.89
+nB = 58882.9
+
+Looking for max significance ...
+pass  8 
+Doing New Stat Model
+S = 9130.89
+B = 58882.9
+Doing New Stat Model
+S = 9130.89
+B = 58882.9
+Doing New Stat Model
+S = 9130.89
+B = 58882.9
+Doing New Stat Model
+S = 9130.89
+B = 58882.9
+Doing New Stat Model
+S = 9130.89
+B = 58882.9
+Doing New Stat Model
+S = 9130.89
+B = 58882.9
+Doing New Stat Model
+S = 9130.89
+B = 58882.9
+Doing New Stat Model
+S = 9130.89
+B = 58882.9
+Doing New Stat Model
+S = 9130.89
+B = 58882.9
+Doing New Stat Model
+S = 9130.89
+B = 58882.9
+Doing New Stat Model
+S = 9130.89
+B = 58882.9
+Doing New Stat Model
+S = 9130.89
+B = 58882.9
+Doing New Stat Model
+S = 9130.89
+B = 58882.9
+Doing New Stat Model
+S = 9130.89
+B = 58882.9
+Doing New Stat Model
+S = 9130.89
+B = 58882.9
+Doing New Stat Model
+S = 9130.89
+B = 58882.9
+Doing New Stat Model
+S = 9130.89
+B = 58882.9
+Doing New Stat Model
+S = 9130.89
+B = 58882.9
+Doing New Stat Model
+S = 9130.89
+B = 58882.9
+Doing New Stat Model
+S = 9130.89
+B = 58882.9
+Doing New Stat Model
+S = 9130.89
+B = 58882.9
+Doing New Stat Model
+S = 9130.89
+B = 58882.9
+Doing New Stat Model
+S = 9130.89
+B = 58882.9
+Doing New Stat Model
+S = 9130.89
+B = 58882.9
+Doing New Stat Model
+S = 9130.89
+B = 58882.9
+Doing New Stat Model
+S = 9130.89
+B = 58882.9
+Doing New Stat Model
+S = 9130.89
+B = 58882.9
+Doing New Stat Model
+S = 9130.89
+B = 58882.9
+Doing New Stat Model
+S = 9130.89
+B = 58882.9
+Doing New Stat Model
+S = 9130.89
+B = 58882.9
+Doing New Stat Model
+S = 9130.89
+B = 58882.9
+Doing New Stat Model
+S = 9130.89
+B = 58882.9
+Doing New Stat Model
+S = 9130.89
+B = 58882.9
+Doing New Stat Model
+S = 9130.89
+B = 58882.9
+Doing New Stat Model
+S = 9130.89
+B = 58882.9
+Doing New Stat Model
+S = 9130.89
+B = 58882.9
+Doing New Stat Model
+S = 9130.89
+B = 58882.9
+Doing New Stat Model
+S = 9130.89
+B = 58882.9
+Doing New Stat Model
+S = 9130.89
+B = 58882.9
+Doing New Stat Model
+S = 9130.89
+B = 58882.9
+Doing New Stat Model
+S = 9130.89
+B = 58882.9
+Doing New Stat Model
+S = 9130.89
+B = 58882.9
+Doing New Stat Model
+S = 9130.89
+B = 58882.9
+Doing New Stat Model
+S = 9130.89
+B = 58882.9
+Doing New Stat Model
+S = 9130.89
+B = 58882.9
+Doing New Stat Model
+S = 9130.89
+B = 58882.9
+Doing New Stat Model
+S = 9130.89
+B = 58882.9
+Doing New Stat Model
+S = 9130.89
+B = 58882.9
+Doing New Stat Model
+S = 9130.89
+B = 58882.9
+Doing New Stat Model
+S = 9130.89
+B = 58882.9
+Doing New Stat Model
+S = 9130.89
+B = 58882.9
+Doing New Stat Model
+S = 9130.89
+B = 58882.9
+Doing New Stat Model
+S = 9130.89
+B = 58882.9
+Doing New Stat Model
+S = 9130.89
+B = 58882.9
+Doing New Stat Model
+S = 9130.89
+B = 58882.9
+Doing New Stat Model
+S = 9130.89
+B = 58882.9
+Doing New Stat Model
+S = 9130.89
+B = 58882.9
+Doing New Stat Model
+S = 9130.89
+B = 58882.9
+Doing New Stat Model
+S = 9130.89
+B = 58882.9
+Doing New Stat Model
+S = 9130.89
+B = 58882.9
+Doing New Stat Model
+S = 9130.89
+B = 58882.9
+Doing New Stat Model
+S = 9130.89
+B = 58882.9
+Doing New Stat Model
+S = 9130.89
+B = 58882.9
+Doing New Stat Model
+S = 9130.89
+B = 58882.9
+Doing New Stat Model
+S = 9130.89
+B = 58879.7
+Doing New Stat Model
+S = 9130.89
+B = 58876.5
+Doing New Stat Model
+S = 9130.89
+B = 58876.5
+Doing New Stat Model
+S = 9130.89
+B = 58863.7
+Doing New Stat Model
+S = 9130.89
+B = 58825.3
+Doing New Stat Model
+S = 9130.89
+B = 58764.5
+Doing New Stat Model
+S = 9130.89
+B = 58607.7
+Doing New Stat Model
+S = 9130.89
+B = 58300.5
+Doing New Stat Model
+S = 9130.89
+B = 57660.5
+Doing New Stat Model
+S = 9130.89
+B = 56559.7
+Doing New Stat Model
+S = 9130.89
+B = 54802.9
+Doing New Stat Model
+S = 9130.89
+B = 52431.8
+Doing New Stat Model
+S = 9130.89
+B = 49401.4
+Doing New Stat Model
+S = 9130.89
+B = 46019
+Doing New Stat Model
+S = 9130.89
+B = 42601.4
+Doing New Stat Model
+S = 9130.88
+B = 39369.4
+Doing New Stat Model
+S = 9130.86
+B = 36441.4
+Doing New Stat Model
+S = 9128.81
+B = 33500.6
+Doing New Stat Model
+S = 9128.55
+B = 31110.3
+Doing New Stat Model
+S = 9127.06
+B = 28915.1
+Doing New Stat Model
+S = 9122.86
+B = 26691.1
+Doing New Stat Model
+S = 9121.67
+B = 24444.7
+Doing New Stat Model
+S = 9121.19
+B = 22204.7
+Doing New Stat Model
+S = 9119.49
+B = 20271.9
+Doing New Stat Model
+S = 9117.78
+B = 18345.5
+Doing New Stat Model
+S = 9113.61
+B = 16524.7
+Doing New Stat Model
+S = 9106.91
+B = 14815.9
+Doing New Stat Model
+S = 9094.55
+B = 13183.9
+Doing New Stat Model
+S = 9033.86
+B = 11734.3
+Doing New Stat Model
+S = 9025.53
+B = 10246.4
+Doing New Stat Model
+S = 9018.51
+B = 8982.36
+Doing New Stat Model
+S = 9009.81
+B = 7814.36
+Doing New Stat Model
+S = 8984.27
+B = 6780.77
+Doing New Stat Model
+S = 8941.64
+B = 5878.37
+Doing New Stat Model
+S = 8932.74
+B = 5094.38
+Doing New Stat Model
+S = 8901.99
+B = 4377.58
+Doing New Stat Model
+S = 8882.79
+B = 3827.18
+Doing New Stat Model
+S = 8841.67
+B = 3270.38
+Doing New Stat Model
+S = 8816.76
+B = 2790.39
+Doing New Stat Model
+S = 8781.49
+B = 2419.19
+Doing New Stat Model
+S = 8737.71
+B = 2115.19
+Doing New Stat Model
+S = 8658.43
+B = 1804.79
+Doing New Stat Model
+S = 8571.83
+B = 1574.39
+Doing New Stat Model
+S = 8461.43
+B = 1343.99
+Doing New Stat Model
+S = 8425.71
+B = 1132.79
+Doing New Stat Model
+S = 8372.11
+B = 975.995
+Doing New Stat Model
+S = 8269.17
+B = 838.396
+Doing New Stat Model
+S = 8173.92
+B = 694.397
+Doing New Stat Model
+S = 7994.68
+B = 559.997
+Doing New Stat Model
+S = 7822.51
+B = 425.598
+Doing New Stat Model
+S = 7626.18
+B = 355.198
+Doing New Stat Model
+S = 7312.64
+B = 268.799
+Doing New Stat Model
+S = 7044.69
+B = 169.599
+Doing New Stat Model
+S = 6784.65
+B = 111.999
+Doing New Stat Model
+S = 6431.38
+B = 86.3996
+Doing New Stat Model
+S = 6024.96
+B = 70.3997
+Doing New Stat Model
+S = 5650.87
+B = 47.9998
+Doing New Stat Model
+S = 5229.78
+B = 35.1998
+Doing New Stat Model
+S = 4768.12
+B = 15.9999
+Doing New Stat Model
+S = 4256.72
+B = 12.7999
+Doing New Stat Model
+S = 3635.11
+B = 12.7999
+Doing New Stat Model
+S = 2858.05
+B = 12.7999
+Doing New Stat Model
+S = 2068.58
+B = 9.59995
+Doing New Stat Model
+S = 1362.82
+B = 6.39997
+Doing New Stat Model
+S = 815.977
+B = 3.19998
+Doing New Stat Model
+S = 443.85
+B = 0
+Doing New Stat Model
+S = 218.07
+B = 0
+Doing New Stat Model
+S = 56.9152
+B = 0
+Doing New Stat Model
+S = 12.8936
+B = 0
+Doing New Stat Model
+S = 2.29955
+B = 0
+Doing New Stat Model
+S = 0.0132827
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+
+  ==========================================================
+ |                         Opt Result                       |
+  ----------------------------------------------------------
+ | pT              | 15.0 - 20.0 GeV/c                      |
+  ----------------------------------------------------------
+ | RAA             | 1                                      |
+  ----------------------------------------------------------
+ | Sig reg         | +- 0.08   | Sideband bkg  | 18401      |
+  ----------------------------------------------------------
+ | weight S        | 9131      | weight B      | 58883      |
+  ----------------------------------------------------------
+ | S               | 8174      | B             | 694        |
+  ----------------------------------------------------------
+ | effS            | 0.895194  | sig           | 87.26      |
+  ----------------------------------------------------------
+ | BDT                                 | 0.11               |
+  ==========================================================
+
+ptmin Now =  20      ptmax Now =   50
+ptmin = 20   ptmax = 50
+pass  -1 
+
+  ====================================================
+ |                Cut Opt Configuration               |
+  ----------------------------------------------------
+ | Method     | BDT::BDT                              |
+pass  0 
+  ----------------------------------------------------
+ | Variable0  | Btrk1Pt                               |
+  ----------------------------------------------------
+ | Variable1  | abs(Btrk1Dz1/Btrk1DzError1)           |
+  ----------------------------------------------------
+ | Variable2  | abs(Btrk1Dxy1/Btrk1DxyError1)         |
+  ----------------------------------------------------
+ | Variable3  | BsvpvDistance/BsvpvDisErr             |
+  ----------------------------------------------------
+ | Variable4  | Balpha                                |
+  ----------------------------------------------------
+ | Variable5  | Bchi2cl                               |
+  ====================================================
+
+PASS = 0.04
+PASS = 0.05
+PASS = 0.06
+PASS = 0.07
+PASS = 0.08
+PASS = 0.1866763547
+PASS =  0.2866763547
+PASS =  0.3866763547
+weightfunctionreco = pthat*weight
+pass  1 
+pass  1.1 
+Pass 1.2
+Pass 1.5
+BDTG Branch = BDT_pt_20_50
+SIGHIS = 0.0413466
+BKGDHIS = 5975
+Cut == (Btrk1Pt > 0.2 && Bchi2cl > 0.05 && BsvpvDistance/BsvpvDisErr > 2.0 && Bpt > 2 && abs(Btrk1Eta-0.0) < 2.4  && (TMath::Abs(By)<2.4&&TMath::Abs(Bmumumass-3.096916)<0.15&&((abs(Bmu1eta)<1.2&&Bmu1pt>3.5)||(abs(Bmu1eta)>1.2&&abs(Bmu1eta)<2.1&&Bmu1pt>(5.47-1.89*abs(Bmu1eta)))||(abs(Bmu1eta)>2.1&&abs(Bmu1eta)<2.4&&Bmu1pt>1.5))&&((abs(Bmu2eta)<1.2&&Bmu2pt>3.5)||(abs(Bmu2eta)>1.2&&abs(Bmu2eta)<2.1&&Bmu2pt>(5.47-1.89*abs(Bmu2eta)))||(abs(Bmu2eta)>2.1&&abs(Bmu2eta)<2.4&&Bmu2pt>1.5))&&Bmu1TMOneStationTight&&Bmu2TMOneStationTight&&Bmu1InPixelLayer>0&&(Bmu1InPixelLayer+Bmu1InStripLayer)>5&&Bmu2InPixelLayer>0&&(Bmu2InPixelLayer+Bmu2InStripLayer)>5&&Bmu1dxyPV<0.3&&Bmu2dxyPV<0.3&&Bmu1dzPV<20&&Bmu2dzPV<20&&Bmu1isTrackerMuon&&Bmu2isTrackerMuon&&Bmu1isGlobalMuon&&Bmu2isGlobalMuon&&Btrk1highPurity&&abs(Btrk1Eta)<2.4&&Btrk1Pt>0.2)  && (Btrk1PixelHit + Btrk1StripHit > 10) &&  (Btrk1PtErr/Btrk1Pt < 0.1)&& Btrk1Chi2ndf/(Btrk1nStripLayer+Btrk1nPixelLayer) < 0.18   && (abs(PVz)<15)&& ((Bmass - 5.27929 ) > 0.25 &&  (Bmass - 5.27929) < 0.30))&&Bpt>20.000000&&Bpt<50.000000
+pass  2 
+pass  3 
+pass  4 
+pass  5 
+pass  6 
+cutb = (Btrk1Pt > 0.2 && Bchi2cl > 0.05 && BsvpvDistance/BsvpvDisErr > 2.0 && Bpt > 2 && abs(Btrk1Eta-0.0) < 2.4  && (TMath::Abs(By)<2.4&&TMath::Abs(Bmumumass-3.096916)<0.15&&((abs(Bmu1eta)<1.2&&Bmu1pt>3.5)||(abs(Bmu1eta)>1.2&&abs(Bmu1eta)<2.1&&Bmu1pt>(5.47-1.89*abs(Bmu1eta)))||(abs(Bmu1eta)>2.1&&abs(Bmu1eta)<2.4&&Bmu1pt>1.5))&&((abs(Bmu2eta)<1.2&&Bmu2pt>3.5)||(abs(Bmu2eta)>1.2&&abs(Bmu2eta)<2.1&&Bmu2pt>(5.47-1.89*abs(Bmu2eta)))||(abs(Bmu2eta)>2.1&&abs(Bmu2eta)<2.4&&Bmu2pt>1.5))&&Bmu1TMOneStationTight&&Bmu2TMOneStationTight&&Bmu1InPixelLayer>0&&(Bmu1InPixelLayer+Bmu1InStripLayer)>5&&Bmu2InPixelLayer>0&&(Bmu2InPixelLayer+Bmu2InStripLayer)>5&&Bmu1dxyPV<0.3&&Bmu2dxyPV<0.3&&Bmu1dzPV<20&&Bmu2dzPV<20&&Bmu1isTrackerMuon&&Bmu2isTrackerMuon&&Bmu1isGlobalMuon&&Bmu2isGlobalMuon&&Btrk1highPurity&&abs(Btrk1Eta)<2.4&&Btrk1Pt>0.2)  && (Btrk1PixelHit + Btrk1StripHit > 10) &&  (Btrk1PtErr/Btrk1Pt < 0.1)&& Btrk1Chi2ndf/(Btrk1nStripLayer+Btrk1nPixelLayer) < 0.18   && (abs(PVz)<15)&& ((Bmass - 5.27929 ) > 0.25 &&  (Bmass - 5.27929) < 0.30))&&Bpt>20.000000&&Bpt<50.000000
+nB Before Bro: = 9559.95
+nB After Bro: = 19119.9
+weightfunctiongen = pthat*weight
+FONLL = fonlls/fo_pp_Bplus_5p03TeV_y2p4.dat
+ptmin = 20  ptmax = 50
+pass  7 
+nbin = 121
+Gen Cut = pthat*weight*((abs(Gy)<2.4&&abs(GpdgId)==521&&GisSignal==1)&&Gpt>20.000000&&Gpt<50.000000)
+Total Signal = 0.0413471
+Total Generated = 0.116005
+Inside Fucked:   ptmin = 50  ptmax = 50
+norm = 0.401
+htheoryreco->Integral() = 2.19182e+06
+nS = 8023.44
+nB = 19119.9
+
+Looking for max significance ...
+pass  8 
+Doing New Stat Model
+S = 8023.44
+B = 19119.9
+Doing New Stat Model
+S = 8023.44
+B = 19119.9
+Doing New Stat Model
+S = 8023.44
+B = 19119.9
+Doing New Stat Model
+S = 8023.44
+B = 19119.9
+Doing New Stat Model
+S = 8023.44
+B = 19119.9
+Doing New Stat Model
+S = 8023.44
+B = 19119.9
+Doing New Stat Model
+S = 8023.44
+B = 19119.9
+Doing New Stat Model
+S = 8023.44
+B = 19119.9
+Doing New Stat Model
+S = 8023.44
+B = 19119.9
+Doing New Stat Model
+S = 8023.44
+B = 19119.9
+Doing New Stat Model
+S = 8023.44
+B = 19119.9
+Doing New Stat Model
+S = 8023.44
+B = 19119.9
+Doing New Stat Model
+S = 8023.44
+B = 19119.9
+Doing New Stat Model
+S = 8023.44
+B = 19119.9
+Doing New Stat Model
+S = 8023.44
+B = 19119.9
+Doing New Stat Model
+S = 8023.44
+B = 19119.9
+Doing New Stat Model
+S = 8023.44
+B = 19119.9
+Doing New Stat Model
+S = 8023.44
+B = 19119.9
+Doing New Stat Model
+S = 8023.44
+B = 19119.9
+Doing New Stat Model
+S = 8023.44
+B = 19119.9
+Doing New Stat Model
+S = 8023.44
+B = 19119.9
+Doing New Stat Model
+S = 8023.44
+B = 19119.9
+Doing New Stat Model
+S = 8023.44
+B = 19119.9
+Doing New Stat Model
+S = 8023.44
+B = 19119.9
+Doing New Stat Model
+S = 8023.44
+B = 19119.9
+Doing New Stat Model
+S = 8023.44
+B = 19119.9
+Doing New Stat Model
+S = 8023.44
+B = 19119.9
+Doing New Stat Model
+S = 8023.44
+B = 19119.9
+Doing New Stat Model
+S = 8023.44
+B = 19119.9
+Doing New Stat Model
+S = 8023.44
+B = 19119.9
+Doing New Stat Model
+S = 8023.44
+B = 19119.9
+Doing New Stat Model
+S = 8023.44
+B = 19119.9
+Doing New Stat Model
+S = 8023.44
+B = 19119.9
+Doing New Stat Model
+S = 8023.44
+B = 19119.9
+Doing New Stat Model
+S = 8023.44
+B = 19119.9
+Doing New Stat Model
+S = 8023.44
+B = 19119.9
+Doing New Stat Model
+S = 8023.44
+B = 19119.9
+Doing New Stat Model
+S = 8023.44
+B = 19119.9
+Doing New Stat Model
+S = 8023.44
+B = 19119.9
+Doing New Stat Model
+S = 8023.44
+B = 19119.9
+Doing New Stat Model
+S = 8023.44
+B = 19119.9
+Doing New Stat Model
+S = 8023.44
+B = 19119.9
+Doing New Stat Model
+S = 8023.44
+B = 19119.9
+Doing New Stat Model
+S = 8023.44
+B = 19119.9
+Doing New Stat Model
+S = 8023.44
+B = 19119.9
+Doing New Stat Model
+S = 8023.44
+B = 19119.9
+Doing New Stat Model
+S = 8023.44
+B = 19119.9
+Doing New Stat Model
+S = 8023.44
+B = 19119.9
+Doing New Stat Model
+S = 8023.44
+B = 19119.9
+Doing New Stat Model
+S = 8023.44
+B = 19119.9
+Doing New Stat Model
+S = 8023.44
+B = 19119.9
+Doing New Stat Model
+S = 8023.44
+B = 19119.9
+Doing New Stat Model
+S = 8023.44
+B = 19119.9
+Doing New Stat Model
+S = 8023.44
+B = 19119.9
+Doing New Stat Model
+S = 8023.44
+B = 19119.9
+Doing New Stat Model
+S = 8023.44
+B = 19119.9
+Doing New Stat Model
+S = 8023.44
+B = 19119.9
+Doing New Stat Model
+S = 8023.44
+B = 19119.9
+Doing New Stat Model
+S = 8023.44
+B = 19119.9
+Doing New Stat Model
+S = 8023.44
+B = 19119.9
+Doing New Stat Model
+S = 8023.44
+B = 19119.9
+Doing New Stat Model
+S = 8023.44
+B = 19119.9
+Doing New Stat Model
+S = 8023.44
+B = 19119.9
+Doing New Stat Model
+S = 8023.44
+B = 19119.9
+Doing New Stat Model
+S = 8023.44
+B = 19119.9
+Doing New Stat Model
+S = 8023.44
+B = 19119.9
+Doing New Stat Model
+S = 8023.44
+B = 19119.9
+Doing New Stat Model
+S = 8023.44
+B = 19119.9
+Doing New Stat Model
+S = 8023.44
+B = 19119.9
+Doing New Stat Model
+S = 8023.44
+B = 19119.9
+Doing New Stat Model
+S = 8023.44
+B = 19116.7
+Doing New Stat Model
+S = 8023.44
+B = 19110.3
+Doing New Stat Model
+S = 8023.44
+B = 19107.1
+Doing New Stat Model
+S = 8023.44
+B = 19094.3
+Doing New Stat Model
+S = 8023.44
+B = 19084.7
+Doing New Stat Model
+S = 8023.44
+B = 19036.7
+Doing New Stat Model
+S = 8023.44
+B = 18982.3
+Doing New Stat Model
+S = 8023.44
+B = 18873.5
+Doing New Stat Model
+S = 8023.44
+B = 18739.1
+Doing New Stat Model
+S = 8023.44
+B = 18524.7
+Doing New Stat Model
+S = 8023.44
+B = 18278.3
+Doing New Stat Model
+S = 8023.42
+B = 18012.7
+Doing New Stat Model
+S = 8023.41
+B = 17615.9
+Doing New Stat Model
+S = 8023.24
+B = 17174.3
+Doing New Stat Model
+S = 8023.21
+B = 16412.7
+Doing New Stat Model
+S = 8023.15
+B = 15318.3
+Doing New Stat Model
+S = 8018.69
+B = 14054.3
+Doing New Stat Model
+S = 8018.11
+B = 12895.9
+Doing New Stat Model
+S = 8018.02
+B = 11833.5
+Doing New Stat Model
+S = 8017.65
+B = 10975.9
+Doing New Stat Model
+S = 8016.84
+B = 10137.6
+Doing New Stat Model
+S = 8016.54
+B = 9391.96
+Doing New Stat Model
+S = 8015.9
+B = 8771.16
+Doing New Stat Model
+S = 8014.5
+B = 8057.56
+Doing New Stat Model
+S = 8012.34
+B = 7379.16
+Doing New Stat Model
+S = 8008.73
+B = 6729.57
+Doing New Stat Model
+S = 8006.96
+B = 6102.37
+Doing New Stat Model
+S = 8002.44
+B = 5414.37
+Doing New Stat Model
+S = 7995.53
+B = 4761.58
+Doing New Stat Model
+S = 7990.57
+B = 4124.78
+Doing New Stat Model
+S = 7978.29
+B = 3558.38
+Doing New Stat Model
+S = 7963.14
+B = 3091.19
+Doing New Stat Model
+S = 7945.82
+B = 2678.39
+Doing New Stat Model
+S = 7934.65
+B = 2278.39
+Doing New Stat Model
+S = 7915.97
+B = 1990.39
+Doing New Stat Model
+S = 7900.2
+B = 1711.99
+Doing New Stat Model
+S = 7876.57
+B = 1542.39
+Doing New Stat Model
+S = 7859.02
+B = 1340.79
+Doing New Stat Model
+S = 7834.64
+B = 1155.19
+Doing New Stat Model
+S = 7801.35
+B = 950.395
+Doing New Stat Model
+S = 7757.01
+B = 774.396
+Doing New Stat Model
+S = 7705.92
+B = 662.397
+Doing New Stat Model
+S = 7643.2
+B = 553.597
+Doing New Stat Model
+S = 7585.47
+B = 441.598
+Doing New Stat Model
+S = 7511.56
+B = 371.198
+Doing New Stat Model
+S = 7415.79
+B = 294.399
+Doing New Stat Model
+S = 7283.12
+B = 233.599
+Doing New Stat Model
+S = 7133.74
+B = 175.999
+Doing New Stat Model
+S = 6931.56
+B = 127.999
+Doing New Stat Model
+S = 6686.53
+B = 105.599
+Doing New Stat Model
+S = 6390.32
+B = 86.3996
+Doing New Stat Model
+S = 6054.23
+B = 70.3997
+Doing New Stat Model
+S = 5663.38
+B = 60.7997
+Doing New Stat Model
+S = 5275.45
+B = 47.9998
+Doing New Stat Model
+S = 4804.48
+B = 28.7999
+Doing New Stat Model
+S = 4258.14
+B = 15.9999
+Doing New Stat Model
+S = 3610.55
+B = 9.59995
+Doing New Stat Model
+S = 2911.65
+B = 3.19998
+Doing New Stat Model
+S = 2144.85
+B = 3.19998
+Doing New Stat Model
+S = 1445.83
+B = 0
+Doing New Stat Model
+S = 879.443
+B = 0
+Doing New Stat Model
+S = 496.282
+B = 0
+Doing New Stat Model
+S = 257.911
+B = 0
+Doing New Stat Model
+S = 102.569
+B = 0
+Doing New Stat Model
+S = 37.9847
+B = 0
+Doing New Stat Model
+S = 6.7984
+B = 0
+Doing New Stat Model
+S = 1.99613
+B = 0
+Doing New Stat Model
+S = 0.679259
+B = 0
+Doing New Stat Model
+S = 0.0512152
+B = 0
+Doing New Stat Model
+S = 0.0280057
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+
+  ==========================================================
+ |                         Opt Result                       |
+  ----------------------------------------------------------
+ | pT              | 20.0 - 50.0 GeV/c                      |
+  ----------------------------------------------------------
+ | RAA             | 1                                      |
+  ----------------------------------------------------------
+ | Sig reg         | +- 0.08   | Sideband bkg  | 5975       |
+  ----------------------------------------------------------
+ | weight S        | 8023      | weight B      | 19120      |
+  ----------------------------------------------------------
+ | S               | 7585      | B             | 442        |
+  ----------------------------------------------------------
+ | effS            | 0.945413  | sig           | 85.14      |
+  ----------------------------------------------------------
+ | BDT                                 | 0.13               |
+  ==========================================================
+
+ptmin Now =  50      ptmax Now =   100
+ptmin = 50   ptmax = 100
+pass  -1 
+
+  ====================================================
+ |                Cut Opt Configuration               |
+  ----------------------------------------------------
+ | Method     | BDT::BDT                              |
+pass  0 
+  ----------------------------------------------------
+ | Variable0  | Btrk1Pt                               |
+  ----------------------------------------------------
+ | Variable1  | abs(Btrk1Dz1/Btrk1DzError1)           |
+  ----------------------------------------------------
+ | Variable2  | abs(Btrk1Dxy1/Btrk1DxyError1)         |
+  ----------------------------------------------------
+ | Variable3  | BsvpvDistance/BsvpvDisErr             |
+  ----------------------------------------------------
+ | Variable4  | Balpha                                |
+  ----------------------------------------------------
+ | Variable5  | Bchi2cl                               |
+  ====================================================
+
+PASS = 0.04
+PASS = 0.05
+PASS = 0.06
+PASS = 0.07
+PASS = 0.08
+PASS = 0.1866763547
+PASS =  0.2866763547
+PASS =  0.3866763547
+weightfunctionreco = pthat*weight
+pass  1 
+pass  1.1 
+Pass 1.2
+Pass 1.5
+BDTG Branch = BDT_pt_50_100
+SIGHIS = 0.00265161
+BKGDHIS = 41
+Cut == (Btrk1Pt > 0.2 && Bchi2cl > 0.05 && BsvpvDistance/BsvpvDisErr > 2.0 && Bpt > 2 && abs(Btrk1Eta-0.0) < 2.4  && (TMath::Abs(By)<2.4&&TMath::Abs(Bmumumass-3.096916)<0.15&&((abs(Bmu1eta)<1.2&&Bmu1pt>3.5)||(abs(Bmu1eta)>1.2&&abs(Bmu1eta)<2.1&&Bmu1pt>(5.47-1.89*abs(Bmu1eta)))||(abs(Bmu1eta)>2.1&&abs(Bmu1eta)<2.4&&Bmu1pt>1.5))&&((abs(Bmu2eta)<1.2&&Bmu2pt>3.5)||(abs(Bmu2eta)>1.2&&abs(Bmu2eta)<2.1&&Bmu2pt>(5.47-1.89*abs(Bmu2eta)))||(abs(Bmu2eta)>2.1&&abs(Bmu2eta)<2.4&&Bmu2pt>1.5))&&Bmu1TMOneStationTight&&Bmu2TMOneStationTight&&Bmu1InPixelLayer>0&&(Bmu1InPixelLayer+Bmu1InStripLayer)>5&&Bmu2InPixelLayer>0&&(Bmu2InPixelLayer+Bmu2InStripLayer)>5&&Bmu1dxyPV<0.3&&Bmu2dxyPV<0.3&&Bmu1dzPV<20&&Bmu2dzPV<20&&Bmu1isTrackerMuon&&Bmu2isTrackerMuon&&Bmu1isGlobalMuon&&Bmu2isGlobalMuon&&Btrk1highPurity&&abs(Btrk1Eta)<2.4&&Btrk1Pt>0.2)  && (Btrk1PixelHit + Btrk1StripHit > 10) &&  (Btrk1PtErr/Btrk1Pt < 0.1)&& Btrk1Chi2ndf/(Btrk1nStripLayer+Btrk1nPixelLayer) < 0.18   && (abs(PVz)<15)&& ((Bmass - 5.27929 ) > 0.25 &&  (Bmass - 5.27929) < 0.30))&&Bpt>50.000000&&Bpt<100.000000
+pass  2 
+pass  3 
+pass  4 
+pass  5 
+pass  6 
+cutb = (Btrk1Pt > 0.2 && Bchi2cl > 0.05 && BsvpvDistance/BsvpvDisErr > 2.0 && Bpt > 2 && abs(Btrk1Eta-0.0) < 2.4  && (TMath::Abs(By)<2.4&&TMath::Abs(Bmumumass-3.096916)<0.15&&((abs(Bmu1eta)<1.2&&Bmu1pt>3.5)||(abs(Bmu1eta)>1.2&&abs(Bmu1eta)<2.1&&Bmu1pt>(5.47-1.89*abs(Bmu1eta)))||(abs(Bmu1eta)>2.1&&abs(Bmu1eta)<2.4&&Bmu1pt>1.5))&&((abs(Bmu2eta)<1.2&&Bmu2pt>3.5)||(abs(Bmu2eta)>1.2&&abs(Bmu2eta)<2.1&&Bmu2pt>(5.47-1.89*abs(Bmu2eta)))||(abs(Bmu2eta)>2.1&&abs(Bmu2eta)<2.4&&Bmu2pt>1.5))&&Bmu1TMOneStationTight&&Bmu2TMOneStationTight&&Bmu1InPixelLayer>0&&(Bmu1InPixelLayer+Bmu1InStripLayer)>5&&Bmu2InPixelLayer>0&&(Bmu2InPixelLayer+Bmu2InStripLayer)>5&&Bmu1dxyPV<0.3&&Bmu2dxyPV<0.3&&Bmu1dzPV<20&&Bmu2dzPV<20&&Bmu1isTrackerMuon&&Bmu2isTrackerMuon&&Bmu1isGlobalMuon&&Bmu2isGlobalMuon&&Btrk1highPurity&&abs(Btrk1Eta)<2.4&&Btrk1Pt>0.2)  && (Btrk1PixelHit + Btrk1StripHit > 10) &&  (Btrk1PtErr/Btrk1Pt < 0.1)&& Btrk1Chi2ndf/(Btrk1nStripLayer+Btrk1nPixelLayer) < 0.18   && (abs(PVz)<15)&& ((Bmass - 5.27929 ) > 0.25 &&  (Bmass - 5.27929) < 0.30))&&Bpt>50.000000&&Bpt<100.000000
+nB Before Bro: = 65.5997
+nB After Bro: = 131.199
+weightfunctiongen = pthat*weight
+FONLL = fonlls/fo_pp_Bplus_5p03TeV_y2p4.dat
+ptmin = 50  ptmax = 100
+pass  7 
+nbin = 201
+Gen Cut = pthat*weight*((abs(Gy)<2.4&&abs(GpdgId)==521&&GisSignal==1)&&Gpt>50.000000&&Gpt<100.000000)
+Total Signal = 0.00265161
+Total Generated = 0.00583286
+Inside Fucked:   ptmin = 100  ptmax = 100
+norm = 0.401
+htheoryreco->Integral() = 62190.4
+nS = 227.656
+nB = 131.199
+
+Looking for max significance ...
+pass  8 
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 131.199
+Doing New Stat Model
+S = 227.656
+B = 127.999
+Doing New Stat Model
+S = 227.656
+B = 124.799
+Doing New Stat Model
+S = 227.656
+B = 124.799
+Doing New Stat Model
+S = 227.656
+B = 124.799
+Doing New Stat Model
+S = 227.656
+B = 121.599
+Doing New Stat Model
+S = 227.656
+B = 115.199
+Doing New Stat Model
+S = 227.656
+B = 108.799
+Doing New Stat Model
+S = 227.656
+B = 105.599
+Doing New Stat Model
+S = 227.656
+B = 95.9995
+Doing New Stat Model
+S = 227.656
+B = 83.1996
+Doing New Stat Model
+S = 227.652
+B = 76.7996
+Doing New Stat Model
+S = 227.652
+B = 76.7996
+Doing New Stat Model
+S = 227.652
+B = 70.3997
+Doing New Stat Model
+S = 227.652
+B = 70.3997
+Doing New Stat Model
+S = 227.644
+B = 67.1997
+Doing New Stat Model
+S = 227.642
+B = 63.9997
+Doing New Stat Model
+S = 227.635
+B = 60.7997
+Doing New Stat Model
+S = 227.607
+B = 57.5997
+Doing New Stat Model
+S = 227.581
+B = 57.5997
+Doing New Stat Model
+S = 227.545
+B = 51.1998
+Doing New Stat Model
+S = 227.514
+B = 41.5998
+Doing New Stat Model
+S = 227.432
+B = 35.1998
+Doing New Stat Model
+S = 227.331
+B = 31.9998
+Doing New Stat Model
+S = 227.15
+B = 25.5999
+Doing New Stat Model
+S = 226.963
+B = 22.3999
+Doing New Stat Model
+S = 226.704
+B = 15.9999
+Doing New Stat Model
+S = 226.211
+B = 12.7999
+Doing New Stat Model
+S = 225.734
+B = 12.7999
+Doing New Stat Model
+S = 224.999
+B = 9.59995
+Doing New Stat Model
+S = 224.076
+B = 9.59995
+Doing New Stat Model
+S = 222.97
+B = 9.59995
+Doing New Stat Model
+S = 221.541
+B = 6.39997
+Doing New Stat Model
+S = 219.388
+B = 3.19998
+Doing New Stat Model
+S = 216.663
+B = 3.19998
+Doing New Stat Model
+S = 213.316
+B = 3.19998
+Doing New Stat Model
+S = 208.84
+B = 3.19998
+Doing New Stat Model
+S = 203.332
+B = 3.19998
+Doing New Stat Model
+S = 196.385
+B = 3.19998
+Doing New Stat Model
+S = 188.52
+B = 0
+Doing New Stat Model
+S = 178.208
+B = 0
+Doing New Stat Model
+S = 165.948
+B = 0
+Doing New Stat Model
+S = 151.043
+B = 0
+Doing New Stat Model
+S = 133.877
+B = 0
+Doing New Stat Model
+S = 115.18
+B = 0
+Doing New Stat Model
+S = 95.3305
+B = 0
+Doing New Stat Model
+S = 76.1145
+B = 0
+Doing New Stat Model
+S = 56.9505
+B = 0
+Doing New Stat Model
+S = 39.3276
+B = 0
+Doing New Stat Model
+S = 25.4911
+B = 0
+Doing New Stat Model
+S = 14.164
+B = 0
+Doing New Stat Model
+S = 7.05546
+B = 0
+Doing New Stat Model
+S = 2.89474
+B = 0
+Doing New Stat Model
+S = 0.723451
+B = 0
+Doing New Stat Model
+S = 0.0591502
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+Doing New Stat Model
+S = 0
+B = 0
+
+  ==========================================================
+ |                         Opt Result                       |
+  ----------------------------------------------------------
+ | pT              | 50.0 - 100.0 GeV/c                     |
+  ----------------------------------------------------------
+ | RAA             | 1                                      |
+  ----------------------------------------------------------
+ | Sig reg         | +- 0.08   | Sideband bkg  | 41         |
+  ----------------------------------------------------------
+ | weight S        | 228       | weight B      | 131        |
+  ----------------------------------------------------------
+ | S               | 219       | B             | 3          |
+  ----------------------------------------------------------
+ | effS            | 0.963682  | sig           | 15.22      |
+  ----------------------------------------------------------
+ | BDT                                 | 0.57               |
+  ==========================================================
+
