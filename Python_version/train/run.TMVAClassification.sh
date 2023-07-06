@@ -1,16 +1,16 @@
 #!/bin/bash
 ##
-ptmin=$3; ptmax=$4 ;
+ptmin=$2; ptmax=$3 ;
 
 
-inputs="../sample/BPMC_3_60.root"
-inputb="../sample/BPData_3_60.root"
+inputs="/lstore/cms/simao/sample/BPMC_3_60.root"
+inputb="/lstore/cms/simao/sample/BPData_3_60.root"
 
-output=rootfiles/TMVA_B_s ;
+output=rootfiles/TMVA;
 
 inputm=$inputs ;
 # outputmva=/mnt/hadoop/cms/store/user/gwangjun/tmva ;
-outputmva=/home/szhaozho/BmesonppTMVA/CMSSW_9_4_10/src/TMVA/BmesonRun2018/BPlus/train;
+#outputmva=/home/szhaozho/BmesonppTMVA/CMSSW_9_4_10/src/TMVA/BmesonRun2018/BPlus/train;
 
 # prefilter
 #OLD CUTS
@@ -19,7 +19,7 @@ outputmva=/home/szhaozho/BmesonppTMVA/CMSSW_9_4_10/src/TMVA/BmesonRun2018/BPlus/
 # cut="Btrk1Pt > 0.5 && Bchi2cl > 0.05 && BsvpvDistance/BsvpvDisErr > 2.0 && Bpt > 2 && abs(Btrk1Eta-0.0) < 2.4  && (TMath::Abs(By)<2.4&&TMath::Abs(Bmumumass-3.096916)<0.15&&((abs(Bmu1eta)<1.2&&Bmu1pt>3.5)||(abs(Bmu1eta)>1.2&&abs(Bmu1eta)<2.1&&Bmu1pt>(5.47-1.89*abs(Bmu1eta)))||(abs(Bmu1eta)>2.1&&abs(Bmu1eta)<2.4&&Bmu1pt>1.5))&&((abs(Bmu2eta)<1.2&&Bmu2pt>3.5)||(abs(Bmu2eta)>1.2&&abs(Bmu2eta)<2.1&&Bmu2pt>(5.47-1.89*abs(Bmu2eta)))||(abs(Bmu2eta)>2.1&&abs(Bmu2eta)<2.4&&Bmu2pt>1.5))&&Bmu1TMOneStationTight&&Bmu2TMOneStationTight&&Bmu1InPixelLayer>0&&(Bmu1InPixelLayer+Bmu1InStripLayer)>5&&Bmu2InPixelLayer>0&&(Bmu2InPixelLayer+Bmu2InStripLayer)>5&&Bmu1dxyPV<0.3&&Bmu2dxyPV<0.3&&Bmu1dzPV<20&&Bmu2dzPV<20&&Bmu1isTrackerMuon&&Bmu2isTrackerMuon&&Bmu1isGlobalMuon&&Bmu2isGlobalMuon&&Btrk1highPurity&&abs(Btrk1Eta)<2.4&&Btrk1Pt>0.2)  && (Btrk1PixelHit + Btrk1StripHit > 10) &&  (Btrk1PtErr/Btrk1Pt < 0.1)&& Btrk1Chi2ndf/(Btrk1nStripLayer+Btrk1nPixelLayer) < 0.18   && (abs(PVz)<15)"
 
 # to match the skim cut
-cut="(pPAprimaryVertexFilter == 1 && pBeamScrapingFilter == 1 && HLT_HIL1DoubleMu0_v1 == 1)  &&  (Bmu1isTriggered == 1 && Bmu2isTriggered == 1 ) && (Btrk1Pt > 0.5 && Bchi2cl > 0.05 && BsvpvDistance/BsvpvDisErr > 2.0 && Bpt > 2 && abs(Btrk1Eta-0.0) < 2.4  && (TMath::Abs(By)<2.4&&TMath::Abs(Bmumumass-3.096916)<0.15&&((abs(Bmu1eta)<1.2&&Bmu1pt>3.5)||(abs(Bmu1eta)>1.2&&abs(Bmu1eta)<2.1&&Bmu1pt>(5.47-1.89*abs(Bmu1eta)))||(abs(Bmu1eta)>2.1&&abs(Bmu1eta)<2.4&&Bmu1pt>1.5))&&((abs(Bmu2eta)<1.2&&Bmu2pt>3.5)||(abs(Bmu2eta)>1.2&&abs(Bmu2eta)<2.1&&Bmu2pt>(5.47-1.89*abs(Bmu2eta)))||(abs(Bmu2eta)>2.1&&abs(Bmu2eta)<2.4&&Bmu2pt>1.5))&&Bmu1TMOneStationTight&&Bmu2TMOneStationTight&&Bmu1InPixelLayer>0&&(Bmu1InPixelLayer+Bmu1InStripLayer)>5&&Bmu2InPixelLayer>0&&(Bmu2InPixelLayer+Bmu2InStripLayer)>5&&Bmu1dxyPV<0.3&&Bmu2dxyPV<0.3&&Bmu1dzPV<20&&Bmu2dzPV<20&&Bmu1isTrackerMuon&&Bmu2isTrackerMuon&&Bmu1isGlobalMuon&&Bmu2isGlobalMuon&&Btrk1highPurity&&abs(Btrk1Eta)<2.4&&Btrk1Pt>0.5)  && (Btrk1PixelHit + Btrk1StripHit > 10) &&  (Btrk1PtErr/Btrk1Pt < 0.1)&& Btrk1Chi2ndf/(Btrk1nStripLayer+Btrk1nPixelLayer) < 0.18   && (abs(PVz)<15))"
+#cut="(pPAprimaryVertexFilter == 1 && pBeamScrapingFilter == 1 && HLT_HIL1DoubleMu0_v1 == 1)  &&  (Bmu1isTriggered == 1 && Bmu2isTriggered == 1 ) && (Btrk1Pt > 0.5 && Bchi2cl > 0.05 && BsvpvDistance/BsvpvDisErr > 2.0 && Bpt > 2 && abs(Btrk1Eta-0.0) < 2.4  && (TMath::Abs(By)<2.4&&TMath::Abs(Bmumumass-3.096916)<0.15&&((abs(Bmu1eta)<1.2&&Bmu1pt>3.5)||(abs(Bmu1eta)>1.2&&abs(Bmu1eta)<2.1&&Bmu1pt>(5.47-1.89*abs(Bmu1eta)))||(abs(Bmu1eta)>2.1&&abs(Bmu1eta)<2.4&&Bmu1pt>1.5))&&((abs(Bmu2eta)<1.2&&Bmu2pt>3.5)||(abs(Bmu2eta)>1.2&&abs(Bmu2eta)<2.1&&Bmu2pt>(5.47-1.89*abs(Bmu2eta)))||(abs(Bmu2eta)>2.1&&abs(Bmu2eta)<2.4&&Bmu2pt>1.5))&&Bmu1TMOneStationTight&&Bmu2TMOneStationTight&&Bmu1InPixelLayer>0&&(Bmu1InPixelLayer+Bmu1InStripLayer)>5&&Bmu2InPixelLayer>0&&(Bmu2InPixelLayer+Bmu2InStripLayer)>5&&Bmu1dxyPV<0.3&&Bmu2dxyPV<0.3&&Bmu1dzPV<20&&Bmu2dzPV<20&&Bmu1isTrackerMuon&&Bmu2isTrackerMuon&&Bmu1isGlobalMuon&&Bmu2isGlobalMuon&&Btrk1highPurity&&abs(Btrk1Eta)<2.4&&Btrk1Pt>0.5)  && (Btrk1PixelHit + Btrk1StripHit > 10) &&  (Btrk1PtErr/Btrk1Pt < 0.1)&& Btrk1Chi2ndf/(Btrk1nStripLayer+Btrk1nPixelLayer) < 0.18   && (abs(PVz)<15))"
 
 
 #algo="CutsGA,CutsSA"
@@ -27,7 +27,7 @@ cut="(pPAprimaryVertexFilter == 1 && pBeamScrapingFilter == 1 && HLT_HIL1DoubleM
 
 # algo="BDT,DNN,DNN2,MLP,CutsGA,MLPBNN,MLPBNN2"
 
-algo="BDTs,DNN"
+algo="pytorch"
 
 
 #stages="0,1,2,3,4,5,6,7,8,9,10,11,12,13" # see definition below
@@ -59,10 +59,10 @@ varlist=(
 )
 
 
-cuts="${cut} && Bgen==23333"
+#cuts="${cut} && Bgen==23333"
 #cutb="${cut} &&  (abs(Bmass - 5.36682 ) > 0.20 &&  abs(Bmass - 5.36682) < 0.30)" # Bmass_pdg=5.28GeV, sideband 0.2 ~ 0.3 for each side.
 
-cutb="${cut} &&  ((Bmass - 5.27929 ) > 0.25 &&  (Bmass - 5.27929) < 0.30)"
+#cutb="${cut} &&  ((Bmass - 5.27929 ) > 0.25 &&  (Bmass - 5.27929) < 0.30)"
 #cutb="${cut} &&  (abs(Bmass - 5.36682 ) > 0.18 &&  abs(Bmass - 5.36682) < 0.36)" # Bmass_pdg=5.28GeV, sideband 0.2 ~ 0.3 for each side.
 #cutb="${cut} &&  (abs(Bmass - 5.36682 ) > 0.22 &&  abs(Bmass - 5.36682) < 0.28)"
 
@@ -93,11 +93,11 @@ tmp=$(date +%y%m%d%H%M%S)
 ##
 [[ $# -eq 0 ]] && echo "usage: ./run_TMVAClassification.sh [train] [draw curves] [create BDT tree]"
 
-g++ TMVAClassification.C $(root-config --libs --cflags) -lTMVA -lTMVAGui -g -o TMVAClassification_${tmp}.exe || exit 1
+#g++ TMVAClassification.C $(root-config --libs --cflags) -lTMVA -lTMVAGui -g -o TMVAClassification_${tmp}.exe || exit 1
 g++ guivariables.C $(root-config --libs --cflags) -lTMVA -lTMVAGui -g -o guivariables_${tmp}.exe || { rm *_${tmp}.exe ; exit 1 ; }
 g++ guiefficiencies.C $(root-config --libs --cflags) -lTMVA -lTMVAGui -g -o guiefficiencies_${tmp}.exe || { rm *_${tmp}.exe ; exit 1 ; }
-g++ guieffvar.C $(root-config --libs --cflags) -lTMVA -lTMVAGui -g -o guieffvar_${tmp}.exe || { rm *_${tmp}.exe ; exit 1 ; }
-g++ mvaprod.C $(root-config --libs --cflags) -lTMVA -lTMVAGui -g -o mvaprod_${tmp}.exe || { rm *_${tmp}.exe ; exit 1 ; }
+#g++ guieffvar.C $(root-config --libs --cflags) -lTMVA -lTMVAGui -g -o guieffvar_${tmp}.exe || { rm *_${tmp}.exe ; exit 1 ; }
+#g++ mvaprod.C $(root-config --libs --cflags) -lTMVA -lTMVAGui -g -o mvaprod_${tmp}.exe || { rm *_${tmp}.exe ; exit 1 ; }
 
 #[[ ${1:-0} -eq 1 ]] && {
 #    conf=
@@ -107,28 +107,28 @@ g++ mvaprod.C $(root-config --libs --cflags) -lTMVA -lTMVAGui -g -o mvaprod_${tm
 #    [[ $conf == 'n' ]] && { rm *_${tmp}.exe ; exit ; }
 #}
 
-stage=$stages
-while [[ $stage == *,* ]]
-do
+#stage=$stages
+#while [[ $stage == *,* ]]
+#do
 # train
-    [[ ${1:-0} -eq 1 ]] && { ./TMVAClassification_${tmp}.exe $inputs $inputb "$cuts" "$cutb" $output $ptmin $ptmax "$algo" "$stage"; } &
-    [[ $sequence -eq 0 ]] && break;
-    while [[ $stage != *, ]] ; do stage=${stage%%[0-9]} ; done ;
-    stage=${stage%%,}
-done
-wait
+#    [[ ${1:-0} -eq 1 ]] && { ./TMVAClassification_${tmp}.exe $inputs $inputb "$cuts" "$cutb" $output $ptmin $ptmax "$algo" "$stage"; } &
+#    [[ $sequence -eq 0 ]] && break;
+#    while [[ $stage != *, ]] ; do stage=${stage%%[0-9]} ; done ;
+#    stage=${stage%%,}
+#done
+#wait
 
 # draw curves
-[[ ${2:-0} -eq 1 ]] && { 
-    ./guivariables_${tmp}.exe $output $ptmin $ptmax "$algo" "$stages"
-    ./guiefficiencies_${tmp}.exe $output $ptmin $ptmax "$algo" "$stages"
+[[ ${1:-0} -eq 1 ]] && { 
+    ./guivariables_${tmp}.exe 
+    ./guiefficiencies_${tmp}.exe 
 }
 
 # draw curve vs. var
-[[ ${2:-0} -eq 1 && $sequence -eq 1 ]] && ./guieffvar_${tmp}.exe $output $ptmin $ptmax "$algo" "$stages"
+#[[ ${1:-0} -eq 1 && $sequence -eq 1 ]] && ./guieffvar_${tmp}.exe $output $ptmin $ptmax "$algo" "$stages"
 
 # produce mva values
-[[ ${3:-0} -eq 1 ]] && ./mvaprod_${tmp}.exe $inputm "Bfinder/ntphi" $output $outputmva $ptmin $ptmax "$algo" "${stages}"
+#[[ ${3:-0} -eq 1 ]] && ./mvaprod_${tmp}.exe $inputm "Bfinder/ntphi" $output $outputmva $ptmin $ptmax "$algo" "${stages}"
 
 ##
-rm *_${tmp}.exe
+rm *_.exe

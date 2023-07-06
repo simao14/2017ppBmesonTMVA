@@ -1,5 +1,5 @@
-ptmin=20
-ptmax=50
+ptmin=5
+ptmax=10
 
 doMVA=1
 doMerge=0

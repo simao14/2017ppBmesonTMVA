@@ -7,7 +7,7 @@ ptmin=(3 5 7 10 15 20 50)
 ptmax=(5 7 10 15 20 50 60)
 
 stages="0-2-4-7-8-11"
-method="BDTs_BDTLow"
+method="pytorch"
 
 #jpsi=true
 jpsi=false
@@ -16,12 +16,12 @@ doMVA=0
 doMerge=0
 doReadxml=1
 
-mvatype="BDTLow"
+mvatype="PyNN"
 
 # InputB="/data/szhaozho/Bmeson2017pp/BPData.root"
 # OutputB="/data/szhaozho/Bmeson2017pp/${mvatype}Output/BP_Data_${mvatype}_pt_${ptmin}_${ptmax}.root"
 
-InputB="../sample/BPData_3_60.root"
+InputB="../../BP/sample/BPData_3_60.root"
 OutputB="../output/BP_Data_${mvatype}_nom_pt_${ptmin[ i ]}_${ptmax[ i ]}.root"
 
 
@@ -77,8 +77,8 @@ MYCUTG=("abs(Gy)<2.4&&abs(GpdgId)==521&&GisSignal==1");
 
 
 if [ $doMVA -eq 1 ]; then
-weight_c="/data3/smcosta/2017ppBmesonTMVA/BP/train/dataset/weights/rootfiles_TMVA_B_s_${method}_${ptmin[ i ]}p0_${ptmax[ i ]}p0_${stages}_root/TMVAClassification_${mvatype}.class.C"
-weight_xml="/data3/smcosta/2017ppBmesonTMVA/BP/train/dataset/weights/rootfiles_TMVA_B_s_${method}_${ptmin[ i ]}p0_${ptmax[ i ]}p0_${stages}_root/TMVAClassification_${mvatype}.weights.xml"
+weight_c="/data3/smcosta/2017ppBmesonTMVA/BP/train/dataset/weights/TMVA_${method}_${ptmin[ i ]}_${ptmax[ i ]}_${stages}/TMVAClassification_${mvatype}.class.C"
+weight_xml="/data3/smcosta/2017ppBmesonTMVA/BP/train/dataset/weights/TMVA_${method}_${ptmin[ i ]}_${ptmax[ i ]}_${stages}/TMVAClassification_${mvatype}.weights.xml"
 # weight_c="../train/dataset/weights/rootfiles_TMVA_B_s_BDT_BDTs_${ptmin[ i ]}p0_${ptmax[ i ]}p0_${stages}_root/TMVAClassification_BDTs.class.C"
 # weight_xml="../train/dataset/weights/rootfiles_TMVA_B_s_BDT_BDTs_${ptmin[ i ]}p0_${ptmax[ i ]}p0_${stages}_root/TMVAClassification_BDTs.weights.xml"
     echo "copying weight files"

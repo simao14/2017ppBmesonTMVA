@@ -47,12 +47,12 @@ int splitbp()
 
   // std::vector<double> ptbins = {5, 7, 10, 15, 20, 50, 60};
   // std::vector<double> ptbins = {7, 10, 15, 20, 50};
-  std::vector<double> ptbins = {5, 60};
+  std::vector<double> ptbins = {10, 15};
 
   ulong max = TVirtualTreePlayer::kMaxEntries;
 
 
-
+  
   for (unsigned i = 0; i < ptbins.size() - 1; ++i) {
     std::cout << "Selecting pT " << ptbins[i] << "\n";
 

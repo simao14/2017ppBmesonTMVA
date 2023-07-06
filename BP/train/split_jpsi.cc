@@ -47,7 +47,7 @@ int split_jpsi()
 
   // std::vector<double> ptbins = {5, 7, 10, 15, 20, 50, 60};
   // std::vector<double> ptbins = {7, 10, 15, 20, 50};
-  std::vector<double> ptbins = {5, 60};
+  std::vector<double> ptbins = {3, 60};
 
   ulong max = TVirtualTreePlayer::kMaxEntries;
 

@@ -106,6 +106,7 @@ int TMVAClassification(std::string inputSname, std::string inputBname, std::stri
   //
   // Boosted Decision Trees
   Use["BDT"]             = 0; // uses Adaptive Boost
+  Use["BDTLow"]          = 0; // Simao stuff
   Use["BDTs"]            = 0; // uses Adaptive Boost
   Use["BDTh"]            = 0; // uses Adaptive Boost
   Use["BDTG"]            = 0; // uses Gradient Boost
@@ -177,7 +178,7 @@ int TMVAClassification(std::string inputSname, std::string inputBname, std::stri
   //// TTree* background     = (TTree*)input->Get("TreeB");
 
   //For 2018 PbPb data
-  TTree* background = (TTree*)inputB->Get("Bfinder/ntKp");
+  TTree* background = (TTree*) inputB->Get("Bfinder/ntKp");
   background->AddFriend("hltanalysis/HltTree");
   background->AddFriend("hiEvtAnalyzer/HiTree");
   background->AddFriend("skimanalysis/HltTree");
@@ -519,7 +520,7 @@ int TMVAClassification(std::string inputSname, std::string inputBname, std::stri
     factory->BookMethod( dataloader, TMVA::Types::kMLP, "MLPBNN", "H:!V:NeuronType=tanh:VarTransform=N:NCycles=600:HiddenLayers=N+5:TestRate=5:TrainingMethod=BFGS:UseRegulator" ); // BFGS training with bayesian regulators
 
   if (Use["MLPBNN2"])
-    factory->BookMethod( dataloader, TMVA::Types::kMLP, "MLPBNN2", "H:!V:NeuronType=tanh:VarTransform=N:NCycles=600:HiddenLayers=N+5,N:TestRate=5:TrainingMethod=BFGS:UseRegulator" ); // BFGS training with bayesian regulators
+    factory->BookMethod( dataloader, TMVA::Types::kMLP, "MLPBNN2", "H:!V:NeuronType=tanh:   =N:NCycles=600:HiddenLayers=N+5,N:TestRate=5:TrainingMethod=BFGS:UseRegulator" ); // BFGS training with bayesian regulators
 
   std::cout << "Pass 7" <<std::endl;
 
@@ -604,6 +605,10 @@ int TMVAClassification(std::string inputSname, std::string inputBname, std::stri
   if (Use["BDT"])  // Adaptive Boost
     factory->BookMethod( dataloader, TMVA::Types::kBDT, "BDT",
                          "!H:!V:NTrees=1000:MinNodeSize=5.0%:MaxDepth=4:BoostType=AdaBoost:AdaBoostBeta=0.50:UseBaggedBoost:BaggedSampleFraction=0.5:SeparationType=GiniIndex:nCuts=30" );
+                        
+  if (Use["BDTLow"])  // Adaptive Boost
+    factory->BookMethod( dataloader, TMVA::Types::kBDT, "BDTLow",
+                         "!H:!V:NTrees=2000:MinNodeSize=5.0%:MaxDepth=5:BoostType=AdaBoost:AdaBoostBeta=0.50:UseBaggedBoost:BaggedSampleFraction=0.5:SeparationType=GiniIndex:nCuts=3000" );
 
   if (Use["BDTs"])  // Adaptive Boost
     factory->BookMethod( dataloader, TMVA::Types::kBDT, "BDTs",
@@ -654,7 +659,7 @@ int TMVAClassification(std::string inputSname, std::string inputBname, std::stri
   factory->EvaluateAllMethods();
 
   // --------------------------------------------------------------
-
+  
   outf->cd("dataset");
   TTree* info = new TTree("tmvainfo", "TMVA info");
   info->Branch("cuts", &cuts);
@@ -672,6 +677,7 @@ int TMVAClassification(std::string inputSname, std::string inputBname, std::stri
 
   delete factory;
   delete dataloader;
+  
   // Launch the GUI for the root macros
   if (!gROOT->IsBatch()) TMVA::TMVAGui( outfname.c_str() );
 

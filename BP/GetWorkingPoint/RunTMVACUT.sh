@@ -1,9 +1,9 @@
-ptmin=10
-ptmax=15
+ptmin=5
+ptmax=10
 
 doReadxml=1
 
-mvatype="CutsSA"
+mvatype="BDTs"
 
 InputB="/data/szhaozho/Bmeson2017pp/BsData.root"
 
