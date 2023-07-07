@@ -43,32 +43,41 @@ def define_model(trial):
     return nn.Sequential(*layers)
 
 
-def get_root(stages):
+def get_root(stages,ptmin,ptmax):
     # Load FashionMNIST dataset.
     fileS = uproot.open("/lstore/cms/simao/sample/BPMC_3_60.root")
     fileB = uproot.open("/lstore/cms/simao/sample/BPData_3_60.root")
 
     treeS = fileS["Bfinder/ntKp"]
+    treeShl = fileS["hltanalysis/HltTree"]
+    treeShi = fileS["hiEvtAnalyzer/HiTree"]
+    treeSskim = fileS["skimanalysis/HltTree"]
     treeB = fileB["Bfinder/ntKp"]
+    treeBhl = fileB["hltanalysis/HltTree"]
+    treeBhi = fileB["hiEvtAnalyzer/HiTree"]
+    treeBskim = fileB["skimanalysis/HltTree"]
 
-    signal=treeS.arrays()
-    background=treeB.arrays()
+    treeS_full=np.concatenate((treeS,treeShl,treeShi,treeSskim),1)
+    treeB_full=np.concatenate((treeB,treeBhl,treeBhi,treeBskim),1)
+
+    cut="((pPAprimaryVertexFilter == 1) & (pBeamScrapingFilter == 1) & (HLT_HIL1DoubleMu0_v1 == 1))  &  ((Bmu1isTriggered == 1) & (Bmu2isTriggered == 1) ) & ((Btrk1Pt > 0.5 && Bchi2cl > 0.05) & (BsvpvDistance/BsvpvDisErr > 2.0) & (Bpt > 2) & (abs(Btrk1Eta-0.0) < 2.4)  & ((TMath::Abs(By)<2.4) & (TMath::Abs(Bmumumass-3.096916)<0.15) & (((abs(Bmu1eta)<1.2) & (Bmu1pt>3.5)) || ((abs(Bmu1eta)>1.2) & (abs(Bmu1eta)<2.1) & Bmu1pt>(5.47-1.89*abs(Bmu1eta))) || (abs(Bmu1eta)>2.1 & abs(Bmu1eta)<2.4 & Bmu1pt>1.5)) & ((abs(Bmu2eta)<1.2 & Bmu2pt>3.5)||(abs(Bmu2eta)>1.2 & abs(Bmu2eta)<2.1 & Bmu2pt>(5.47-1.89*abs(Bmu2eta)))||(abs(Bmu2eta)>2.1 & abs(Bmu2eta)<2.4 & Bmu2pt>1.5)) & Bmu1TMOneStationTight & Bmu2TMOneStationTight & Bmu1InPixelLayer>0 & (Bmu1InPixelLayer+Bmu1InStripLayer)>5 & Bmu2InPixelLayer>0 & (Bmu2InPixelLayer+Bmu2InStripLayer)>5 & Bmu1dxyPV<0.3 & Bmu2dxyPV<0.3 & Bmu1dzPV<20 & Bmu2dzPV<20 & Bmu1isTrackerMuon & Bmu2isTrackerMuon & Bmu1isGlobalMuon & Bmu2isGlobalMuon & Btrk1highPurity & abs(Btrk1Eta)<2.4 & Btrk1Pt>0.5)   &  (Btrk1PixelHit + Btrk1StripHit > 10)  &   (Btrk1PtErr/Btrk1Pt < 0.1) &  Btrk1Chi2ndf/(Btrk1nStripLayer+Btrk1nPixelLayer) < 0.18    &  (abs(PVz)<15))"
+    cuts="%s & Bgen==23333 & Bpt>%f & Bpt<%f " % (cut, ptmin, ptmax)
+    cutb="%s & ((Bmass - 5.27929 ) > 0.25 &  (Bmass - 5.27929) < 0.30) & Bpt>%f & Bpt<%f" % (cut, ptmin, ptmax)
+    
+    signal=treeS_full.arrays(cut=cuts,aliases={"Trk1DCAz":"abs(Btrk1Dz1/Btrk1DzError1)","Trk2DCAz":"abs(Btrk2Dz1/Btrk2DzError1)","Trk1DCAxy":"abs(Btrk1Dxy1/Btrk1DxyError1)","Trk2DCAxy":"abs(Btrk2Dxy1/Btrk2DxyError1)","MassDis":"abs(Btktkmass-1.019455)","dls":"BsvpvDistance/BsvpvDisErr","dls2D":"Bd0"})
+    background=treeB_full.arrays(cut=cutb,aliases={"Trk1DCAz":"abs(Btrk1Dz1/Btrk1DzError1)","Trk2DCAz":"abs(Btrk2Dz1/Btrk2DzError1)","Trk1DCAxy":"abs(Btrk1Dxy1/Btrk1DxyError1)","Trk2DCAxy":"abs(Btrk2Dxy1/Btrk2DxyError1)","MassDis":"abs(Btktkmass-1.019455)","dls":"BsvpvDistance/BsvpvDisErr","dls2D":"Bd0"})
 
     nsignal=len(signal["Bmass"])
     nback=len(background["Bmass"])
     nevents=len(nsignal+nback)
-
-    x = np.zeros([nevents,len(stages)])
-    y = np.zeros(nevents)
+    x=np,zeros([nevents,len(stages)])
+    y=np.zeros(nevents)
     y[:nsignal]=1
     for i,j in enumerate(stages):
-        x[:nsignal,i]= signal[j]
-        x[nsignal:,i]= background[j]
+        x[:nsignal,:]=signal[j]
+        x[nsignal:,:]=background[j]
 
-    for k in range(nevents):
-        
-    idx=list(range(nevents))
-    random.shuffle(idx)
+    
 
     data= {"train": (train_X, data["ytrain"]),
             "test": (test_X, data["ytest"])}

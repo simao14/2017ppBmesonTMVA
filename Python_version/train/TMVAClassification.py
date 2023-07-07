@@ -12,40 +12,22 @@ def DNN(n_classes, n_features, hidden_size, layers,activation_type, dropout):
     
     first_layer = nn.Linear(n_features, hidden_size)
     hidden_layers = nn.ModuleList([nn.Linear(hidden_size, hidden_size) for i in range(layers-1)])
-    output_layer = nn.Linear(128, n_classes)
+    output_layer = nn.Linear(hidden_size, n_classes)
     if activation_type == "relu": activation = nn.ReLU()
     elif activation_type == "tanh": activation = nn.Tanh()
     drop=nn.Dropout(p=dropout)
-    #model=nn.Sequential(first_layer,activation,drop)
-    #for k in range(layers-1):                                           
-    #    model.append(hidden_layers[k])
-    #    model.append(activation)
-    #    model.append(drop)
-    #model.append(output_layer)  
-    #model.append(nn.Softmax(dim=1)) 
-    model=nn.Sequential()
-    model.append(first_layer)
-    model.append(activation)
-    model.append(drop)
-    model.append(nn.Linear(hidden_size, hidden_size))
-    model.append(activation)
-    model.append(drop)
-    model.append(nn.Linear(hidden_size, 128))
-    model.append(activation)
-    model.append(drop)
-    model.append(nn.Linear(128, 128))
-    model.append(activation)
-    model.append(drop)
-    model.append(nn.Linear(128, 128))
-    model.append(activation)
-    model.append(drop)
-    model.append(output_layer)
+    model=nn.Sequential(first_layer,activation,drop)
+    for k in range(layers-1):                                           
+        model.append(hidden_layers[k])
+        model.append(activation)
+        model.append(drop)
+    model.append(output_layer)  
     model.append(nn.Softmax(dim=1)) 
     return model
 
 def train(model, train_loader, val_loader, num_epochs, batch_size, optimizer, criterion, save_best, scheduler):
-
-    trainer = optimizer(model.parameters(), lr=0.001, weight_decay=0.0001)
+    
+    trainer = optimizer(model.parameters(), lr=0.0001, weight_decay=0.001)
     schedule, schedulerSteps = scheduler
     best_val = None
  
@@ -135,7 +117,7 @@ parser.add_argument('ptmax', type=float)
 parser.add_argument('-epochs', default=30, type=int)
 parser.add_argument('-batch_size', default=256, type=int)
 parser.add_argument('-hidden_size', type=int, default=256)
-parser.add_argument('-layers', type=int, default=5)
+parser.add_argument('-layers', type=int, default=10)
 parser.add_argument('-dropout', type=float, default=0.0)
 parser.add_argument('-stages', type=int, default=[0,2,4,7,8,11])
 parser.add_argument('-activation',
